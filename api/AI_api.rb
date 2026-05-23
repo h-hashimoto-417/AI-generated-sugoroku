@@ -2,35 +2,38 @@
 
 require "json"
 
-def generate_sugoroku_map(theme)
+def build_prompt(user_input)
+    prompt = <<~TEXT
+        あなたはスゴロクゲームの盤面を作成するAIです
 
-    events = [
-        {:type => "event", :text => "2マス進む", :effect => "move", :value => 2},
-        {:type => "event", :text => "１回休み", :effect => "skip", :value => 1},
-        {:type => "event", :text => "3マス戻る", :effect => "move", :value => -3},
-        {:type => "event", :text => "サイコロをもう一回振る", :effect => "roll_again", :value => 1},
-        {:type => "event", :text => "宝箱を見つける", :effect => "bonus", :value => 1}
-    ]
+        ユーザーの希望:
+        #{user_input}
 
-    random_squares = 3.times.map {events.sample}
+        ユーザーの希望に合わせて、スゴロクのタイトルとマスの内容を作成してください
 
-    result =  {
-        :title => "#{theme} スゴロク",
-        :squares =>  [
-       {:type => "start", :text => "スタート", :effect => "none", :value => 0},
-       {:type => "normal", :text => "#{theme}について話す", :effect => "none", :value => 0},
-       *random_squares,
-       {:type => "goal", :text => "ゴール", :effect => "finish", :value => 0}     
-    ]
-}
+        必ず以下のJSON形式だけで返してください
 
-result
+        {
+            "title" : "スゴロクのタイトル”,
+            "squares" : [
+                {"type": "start", "text": "スタート", "effect": "none", "value": 0 },
+                {"type": "event", "text": "イベント内容", "effect": "move", "value": 2 },
+                {"type": "event", "text": "イベント内容", "effect": "skip", "value": 1 },
+                {"type": "goal", "text": "ゴール", "effect": "finish", "value": 0 }
+            ]
+        }
 
+        effectには "none", "move", "skip", "roll_again", "bonus", "finish" のいずれかを使ってください。
+        valueは効果に応じた数値にしてください。
+        JSON以外の説明文は書かないでください。
+    TEXT
+
+    prompt
 end
 
 puts "作りたいスゴロクのテーマを入力してください : "
-theme = gets.chomp
+user_input = gets.chomp
 
-result = generate_sugoroku_map(theme)
+prompt = build_prompt(user_input)
 
-puts JSON.pretty_generate(result)
+puts prompt
