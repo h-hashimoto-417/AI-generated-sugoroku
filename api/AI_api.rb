@@ -28,6 +28,9 @@ result
 
 end
 
-result = generate_sugoroku_map("旅行")
+puts "作りたいスゴロクのテーマを入力してください : "
+theme = gets.chomp
+
+result = generate_sugoroku_map(theme)
 
 puts JSON.pretty_generate(result)
