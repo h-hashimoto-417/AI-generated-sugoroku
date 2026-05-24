@@ -14,7 +14,7 @@ def build_prompt(user_input)
         必ず以下のJSON形式だけで返してください
 
         {
-            "title" : "スゴロクのタイトル”,
+            "title" : "スゴロクのタイトル",
             "squares" : [
                 {"type": "start", "text": "スタート", "effect": "none", "value": 0 },
                 {"type": "event", "text": "イベント内容", "effect": "move", "value": 2 },
@@ -35,11 +35,15 @@ def call_ai_api(prompt)
     # TODO : 使用するAIのAPIが決まったらここに接続処理を書く
     # ex : OPENAI, Claude, Gemini, Difyなど
 
-    # 仮の返答
-    return {
-        :title => "仮の返答"
-        :square => []
+    result =  {
+        :title => "仮のスゴロク",
+        :squares => [
+            {:type => "start", :text => "スタート", :effect => "none", :value => 0},
+            {:type => "event", :text => "API接続後、ここにAI生成マスが入ります", :effect => "none", :value => 0},
+            {:type => "goal", :text => "ゴール", :effect => "finish", :value => 0}
+        ]
     }
+    result    
 end
 
 puts "作りたいスゴロクのテーマを入力してください : "
@@ -47,4 +51,6 @@ user_input = gets.chomp
 
 prompt = build_prompt(user_input)
 
-puts prompt
+result = call_ai_api(prompt)
+
+puts JSON.pretty_generate(result)
