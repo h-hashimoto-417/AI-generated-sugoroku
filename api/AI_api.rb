@@ -1,6 +1,8 @@
 # 仮実装
 
 require "json"
+require "net/http"
+require "uri"
 
 def build_prompt(user_input)
     prompt = <<~TEXT
@@ -32,18 +34,52 @@ def build_prompt(user_input)
 end
 
 def call_ai_api(prompt)
-    # TODO : 使用するAIのAPIが決まったらここに接続処理を書く
-    # ex : OPENAI, Claude, Gemini, Difyなど
+    api_key = ENV["GEMINI_API_KEY"]
 
-    result =  {
-        :title => "仮のスゴロク",
-        :squares => [
-            {:type => "start", :text => "スタート", :effect => "none", :value => 0},
-            {:type => "event", :text => "API接続後、ここにAI生成マスが入ります", :effect => "none", :value => 0},
-            {:type => "goal", :text => "ゴール", :effect => "finish", :value => 0}
+    uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=#{api_key}")
+    request = Net::HTTP::Post.new(uri)
+    request["Content-Type"] = "application/json"
+
+    request.body = {
+        :contents => [
+            {
+                :parts => [
+                    {:text => prompt}
+                ]
+            }
         ]
-    }
-    result    
+    }.to_json
+
+    response = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do |http|
+        http.request(request)
+    end
+
+    data = JSON.parse(response.body)
+
+    usage = data["usageMetadata"]
+    
+    puts "===== Token Usage ====="
+    puts "Prompt Tokens : #{usage["promptTokenCount"]}"
+    puts "Output Tokens : #{usage["candidatesTokenCount"]}"
+    puts "Total Tokens  : #{usage["totalTokenCount"]}"
+
+    if usage["thoughtsTokenCount"]
+        puts "Thought Tokens: #{usage["thoughtsTokenCount"]}"
+    end
+
+    puts "======================="
+
+    if data["error"]
+        puts "API error: "
+        puts data["error"]["message"]
+        exit
+    end
+
+    text = data["candidates"][0]["content"]["parts"][0]["text"]
+
+    text = text.gsub(/```json|```/, "").strip
+
+    JSON.parse(text)
 end
 
 puts "作りたいスゴロクのテーマを入力してください : "
