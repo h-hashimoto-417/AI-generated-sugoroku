@@ -31,6 +31,17 @@ def build_prompt(user_input)
     prompt
 end
 
+def call_ai_api(prompt)
+    # TODO : 使用するAIのAPIが決まったらここに接続処理を書く
+    # ex : OPENAI, Claude, Gemini, Difyなど
+
+    # 仮の返答
+    return {
+        :title => "仮の返答"
+        :square => []
+    }
+end
+
 puts "作りたいスゴロクのテーマを入力してください : "
 user_input = gets.chomp
 
