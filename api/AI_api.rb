@@ -37,6 +37,7 @@ def call_ai_api(prompt)
     api_key = ENV["GEMINI_API_KEY"]
 
     uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=#{api_key}")
+
     request = Net::HTTP::Post.new(uri)
     request["Content-Type"] = "application/json"
 
@@ -44,7 +45,7 @@ def call_ai_api(prompt)
         :contents => [
             {
                 :parts => [
-                    {:text => prompt}
+                    { :text => prompt }
                 ]
             }
         ]
@@ -56,23 +57,27 @@ def call_ai_api(prompt)
 
     data = JSON.parse(response.body)
 
-    usage = data["usageMetadata"]
-
-    puts "===== Token Usage ====="
-    puts "Prompt Tokens : #{usage["promptTokenCount"]}"
-    puts "Output Tokens : #{usage["candidatesTokenCount"]}"
-    puts "Total Tokens  : #{usage["totalTokenCount"]}"
-
-    if usage["thoughtsTokenCount"]
-        puts "Thought Tokens: #{usage["thoughtsTokenCount"]}"
-    end
-
-    puts "======================="
-
     if data["error"]
-        puts "API error: "
+        puts "API Error:"
         puts data["error"]["message"]
         exit
+    end
+
+    usage = data["usageMetadata"]
+
+    if usage
+        puts "===== Token Usage ====="
+        puts "Prompt Tokens : #{usage["promptTokenCount"]}"
+        puts "Output Tokens : #{usage["candidatesTokenCount"]}"
+        puts "Total Tokens  : #{usage["totalTokenCount"]}"
+
+        if usage["thoughtsTokenCount"]
+            puts "Thought Tokens: #{usage["thoughtsTokenCount"]}"
+        end
+
+        puts "======================="
+    else
+        puts "Token usage information is not available."
     end
 
     text = data["candidates"][0]["content"]["parts"][0]["text"]
