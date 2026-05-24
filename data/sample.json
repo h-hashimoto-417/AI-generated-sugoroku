@@ -1,5 +1,5 @@
 {
-    "title" : "たのしいすごろく",
+    "title" : "さんぷるすごろく",
     "squares" : [
         {"type": "start", "text": "スタート", "effect": "none", "value": 0 },
         {"type": "event", "text": "イベント内容", "effect": "move", "value": 2 },
