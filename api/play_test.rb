@@ -1,14 +1,41 @@
 require "json"
 
+def apply_effect(square, position, squares)
+    if square["effect"] == "move"
+        position += square["value"]
+        position = 0 if position < 0
+        position = squares.length - 1 if position >= squares.length
+        puts "#{square["value"]}マス移動しました"
+
+    elsif square["effect"] == "skip"
+        puts "#{square["value"]}回休みです"
+
+    elsif square["effect"] == "bonus"
+        puts "ボーナスを獲得しました"
+
+    elsif square["effect"] == "finish"
+        puts "ゴール！"
+    end
+
+    position
+end
+
 map_data = JSON.parse(File.read("api/generated_map.json"))
 
 squares = map_data["squares"]
 position = 0
+skip_turn = 0
 
 puts "タイトル: #{map_data["title"]}"
 puts "ゲーム開始!"
 
 while position < squares.length - 1
+    if skip_turn > 0
+        puts "\n#{skip_turn}回休み中です"
+        skip_turn -= 1
+        next
+    end
+
     puts "\nEnterキーでサイコロを振る"
     gets
     
@@ -23,19 +50,34 @@ while position < squares.length - 1
     puts "現在位置: #{position}"
     puts square["text"]
 
-    if square["effect"] == "move"
-        position += square["value"]
-        position = 0 if position < 0
-        position = squares.length - 1 if position >= squares.length
-        puts "#{square["value"]}マス移動しました"
-    elsif square["effect"] == "skip"
-        puts "#{square["value"]}回休みです"
-    elsif square["effect"] == "roll_again"
+    if square["effect"] == "skip"
+        skip_turn = square["value"]
+    end
+
+    position = apply_effect(square, position, squares)
+
+    if square["effect"] == "roll_again"
         puts "もう一回サイコロを振れます"
-    elsif square["effect"] == "bonus"
-        puts "ボーナスを獲得しました"
-    elsif square["effect"] == "finish"
-        puts "ゴール！"
+
+        puts "\nEnterキーで追加のサイコロを振る"
+        gets
+
+        extra_dice = rand(1..6)
+        puts "追加サイコロ: #{extra_dice}"
+        
+        position += extra_dice
+        position = squares.length - 1 if position >= squares.length
+
+        square = squares[position]
+
+        puts "現在位置: #{position}"
+        puts square["text"]
+
+        if square["effect"] == "skip"
+            skip_turn = square["value"]
+        end
+
+        position = apply_effect(square, position, squares)
     end
 end
 
