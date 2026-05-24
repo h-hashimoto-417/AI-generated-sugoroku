@@ -57,7 +57,7 @@ def call_ai_api(prompt)
     data = JSON.parse(response.body)
 
     usage = data["usageMetadata"]
-    
+
     puts "===== Token Usage ====="
     puts "Prompt Tokens : #{usage["promptTokenCount"]}"
     puts "Output Tokens : #{usage["candidatesTokenCount"]}"
@@ -90,3 +90,10 @@ prompt = build_prompt(user_input)
 result = call_ai_api(prompt)
 
 puts JSON.pretty_generate(result)
+
+File.write(
+    "api/generated_map.json",
+    JSON.pretty_generate(result)
+)
+
+puts "generated_map.jsonに保存しました"
