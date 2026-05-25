@@ -39,7 +39,15 @@ def apply_effect(square, position, squares)
     position
 end
 
-map_data = JSON.parse(File.read("api/generated_map.json"))
+file_path = "api/generated_map.json"
+
+unless File.exist?(file_path)
+    puts "generated_map.jsonが見つかりません"
+    puts "先に AI_api.rb を実行してマップを生成してください"
+    exit
+end
+
+map_data = JSON.parse(File.read(file_path))
 
 squares = map_data["squares"]
 position = 0
