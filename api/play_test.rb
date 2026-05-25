@@ -69,12 +69,6 @@ while position < squares.length - 1
     position, new_skip_turn = process_square(square, position, squares)
     skip_turn = new_skip_turn if new_skip_turn > 0
 
-    if square["effect"] == "skip"
-        skip_turn = square["value"]
-    end
-
-    position = apply_effect(square, position, squares)
-
     if square["effect"] == "roll_again"
         puts "もう一回サイコロを振れます"
 
