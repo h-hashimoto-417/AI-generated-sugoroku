@@ -1,8 +1,18 @@
 require "json"
 
+def roll_dice
+    rand(1..6)
+end
+
 def process_square(square, position, squares)
-   position, new_skip_turn = process_square(square, position, squares)
-   skip_turn = new_skip_turn if new_skip_turn > 0
+    puts "現在位置: #{position}"
+    puts square["text"]
+
+    skip_turn = 0
+
+    if square["effect"] == "skip"
+        skip_turn = square["value"]
+    end
 
     position = apply_effect(square, position, squares)
 
@@ -48,7 +58,7 @@ while position < squares.length - 1
     puts "\nEnterキーでサイコロを振る"
     gets
     
-    dice = rand(1..6)
+    dice = roll_dice
     puts "サイコロ: #{dice}"
 
     position += dice
@@ -56,8 +66,8 @@ while position < squares.length - 1
 
     square = squares[position]
 
-    puts "現在位置: #{position}"
-    puts square["text"]
+    position, new_skip_turn = process_square(square, position, squares)
+    skip_turn = new_skip_turn if new_skip_turn > 0
 
     if square["effect"] == "skip"
         skip_turn = square["value"]
@@ -71,7 +81,7 @@ while position < squares.length - 1
         puts "\nEnterキーで追加のサイコロを振る"
         gets
 
-        extra_dice = rand(1..6)
+        extra_dice = roll_dice
         puts "追加サイコロ: #{extra_dice}"
         
         position += extra_dice
@@ -79,14 +89,8 @@ while position < squares.length - 1
 
         square = squares[position]
 
-        puts "現在位置: #{position}"
-        puts square["text"]
-
-        if square["effect"] == "skip"
-            skip_turn = square["value"]
-        end
-
-        position = apply_effect(square, position, squares)
+        position, new_skip_turn = process_square(square, position, squares)
+        skip_turn = new_skip_turn if new_skip_turn > 0
     end
 end
 
