@@ -10,6 +10,8 @@ while true
   else
     break
   end
+
+  puts
 end
 
 player_info = Array.new(player_count+1) {{"name" => "hogehoge", "current_place" => 1, "state" => "no_goal", "place" => -1}}
