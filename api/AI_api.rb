@@ -1,5 +1,3 @@
-# 仮実装
-
 require "json"
 require "net/http"
 require "uri"
@@ -25,7 +23,7 @@ def build_prompt(user_input)
             ]
         }
 
-        effectには "none", "move", "skip", "roll_again", "bonus", "finish" のいずれかを使ってください。
+        effectには "none", "move", "skip", "roll_again", "finish" のいずれかを使ってください。
         valueは効果に応じた数値にしてください。
         JSON以外の説明文は書かないでください。
     TEXT
