@@ -1,5 +1,14 @@
 require "json"
 
+def process_square(square, position, squares)
+   position, new_skip_turn = process_square(square, position, squares)
+   skip_turn = new_skip_turn if new_skip_turn > 0
+
+    position = apply_effect(square, position, squares)
+
+    return position, skip_turn
+end
+
 def apply_effect(square, position, squares)
     if square["effect"] == "move"
         position += square["value"]
@@ -10,8 +19,8 @@ def apply_effect(square, position, squares)
     elsif square["effect"] == "skip"
         puts "#{square["value"]}回休みです"
 
-    elsif square["effect"] == "bonus"
-        puts "ボーナスを獲得しました"
+    # elsif square["effect"] == "bonus"
+    #     puts "ボーナスを獲得しました"
 
     elsif square["effect"] == "finish"
         puts "ゴール！"
