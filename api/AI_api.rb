@@ -83,6 +83,16 @@ def call_ai_api(prompt)
     text = text.gsub(/```json|```/, "").strip
 
     JSON.parse(text)
+    unless result["title"] && result["squares"]
+        puts "JSON format error"
+        exit
+    end
+
+    result["squares"].each do |square|
+        unless square["type"] && square["text"] && sqaure["effect"]
+            puts "Invalid square data"
+            exit
+        end
 end
 
 puts "作りたいスゴロクのテーマを入力してください : "
