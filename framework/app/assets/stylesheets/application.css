@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .header {
+   background-color: whitesmoke;
+   color: black;
+   text-align: center;
+   font-size: 48px;
+   padding: 40px 0;
+   font-weight: 900;
+   font-family: 'Hiragino Sans', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ .content-center {
+    text-align: center;
+    margin-top: 50px;
+ }
+ .content-right {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 50px;
+ }
+
+ .login-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #28a745;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #28a745;
+    cursor: pointer;
+ }
+
+ .prompt-input {
+    width:800px;
+    height:220px;
+    
+    padding: 10px;
+    font-size:20px;
+    border-radius:20px;
+    border:2px solid rgb(147, 147, 147);
+ }
+
+ .generate-button {
+    padding: 15px 30px;
+    font-size: 24px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+
+ .result {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #333;
+ }
