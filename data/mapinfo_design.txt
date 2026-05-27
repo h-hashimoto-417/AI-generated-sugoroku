@@ -4,3 +4,13 @@
 すごろくのタイトル -> string
 (総マス数 -> integer)
 jsonファイル名 -> string
+マップid -> integer
+
+
+
+マスごとの設計
+持つべき情報：
+
+マップid -> integer
+マスが何番目か.
+以下jsonの内容
