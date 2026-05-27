@@ -7,13 +7,29 @@
 
   <div class="modal-content">
     <h2>プレイヤー登録</h2>
+    <div class="content-sidebyside">
+
+    <h3>プレイヤー人数</h3>
     <input
-      type="text"
-      placeholder="プレイヤー名"
+        type="number"
+        min="1"
+        max="4"
+        value="2"
+        class="player-count"
     >
+
+</div>
     <button onclick="closeModal()">
       決定
     </button>
+    <script>
+        function closeModal() {
+
+        document
+        .getElementById("player-modal")
+        .style.display = "none";
+        }
+    </script>
 </div>
 
 </div>
