@@ -2,5 +2,5 @@
 持つべき情報：
 
 すごろくのタイトル -> string
-(総マス数 -> int)
+(総マス数 -> integer)
 jsonファイル名 -> string
