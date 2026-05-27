@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/home" => "home#top"
   post "/home/generate" => "home#generate"
+  get "/play" => "play#top"
+  get "/play/input-member" => "play#input_member"
 end
