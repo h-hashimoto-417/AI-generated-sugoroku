@@ -2,7 +2,7 @@
 持つべき情報
 
 プレイヤー名 -> string
-ユーザid -> int
+ユーザid -> int or string
 現在地 -> int
 コマの色 -> string or int
 状態(ゴール、未ゴール)　-> boolean or int
