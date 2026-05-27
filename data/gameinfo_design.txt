@@ -5,3 +5,11 @@
 すごろくのタイトル -> string
 ゲーム人数 -> integer
 ゲームモード(1端末でのプレイ or 複数端末でのプレイ) -> integer
+
+
+sugoroku-app(dev):001> Game.column_names
+=> ["id", "title", "description", "max_players", "created_at", "updated_at", "current_player_order"]
+sugoroku-app(dev):002> Player.column_names
+=> ["id", "game_id", "name", "position", "is_goal", "skip_turns", "rank", "turn_order", "created_at", "updated_at"]
+sugoroku-app(dev):003> Square.column_names
+=> ["id", "game_id", "position", "square_type", "text", "effect", "value", "created_at", "updated_at"]
