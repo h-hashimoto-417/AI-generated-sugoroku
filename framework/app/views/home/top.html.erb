@@ -1,0 +1,19 @@
+<div class="content-right">
+    <button class="login-button">ログイン</button>
+</div>
+<h1 class="home-header">AI 生成スゴロク</h1>
+<%= form_with url: "/home/generate", method: :post, data: { turbo: false } do %>
+    <div class="content-center">
+        <textarea 
+            name="prompt"
+            placeholder="どんなスゴロクを作りたいか（例：テーマや設定）を入力してください"
+            class="prompt-input"
+        ></textarea>
+    </div>
+    <div class="content-center">
+        <button 
+        type="submit"
+        class="generate-button"
+        >生成</button>
+    </div>
+<% end %>
