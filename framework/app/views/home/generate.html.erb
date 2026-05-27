@@ -2,4 +2,13 @@
     <h1 class="site-title">AI生成スゴロク</h1>
     <button class="login-button">ログイン</button>
 </div>
-
+<div class="content-center">
+    <h2 class="show-result">生成完了！</h2>
+    <div class="sugoroku-display">
+        <%= @sugoroku %>
+    </div>
+</div>
+<div class="content-sidebyside">
+    <button class="action-button">遊ぶ</button>
+    <button class="action-button" onclick="location.href='/home'">再生成</button>
+</div>
