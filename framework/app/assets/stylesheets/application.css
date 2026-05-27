@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .header {
+ .home-header {
    background-color: whitesmoke;
    color: black;
    text-align: center;
@@ -22,6 +22,22 @@
    padding: 40px 0;
    font-weight: 900;
    font-family: 'Hiragino Sans', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ .header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+ }
+
+ .site-title {
+    font-size: 24px;
+    color: #333;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: 900;
+    font-family: 'Hiragino Sans', 'Arial Narrow', Arial, sans-serif;
  }
 
  .content-center {
