@@ -13,8 +13,4 @@ class HomeController < ApplicationController
     #redirect_to("/home/show_result")
   end
 
-  def show_result
-    # ここで生成された盤面とイベントを表示する処理を実装する
-    # 例: @board = params[:board]; @events = params[:events]
-  end
 end
