@@ -42,7 +42,9 @@ class ApplicationController < ActionController::Base
       map_id: m_id,
       num_of_players: num_players,
       # ターンは0-based indexingで初期化.
-      current_turn: 0
+      current_turn: 0,
+      # 0 -> 進行中.
+      game_status: 0
     )
 
     # プレイヤー名. UIからもらう.

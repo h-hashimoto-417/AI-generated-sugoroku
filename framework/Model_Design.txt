@@ -14,6 +14,9 @@ num_of_players:integer
 
 current_turn:integer
 
+game_status: integer
+(0: 進行中, 1: 終了済)
+
 
 
 User

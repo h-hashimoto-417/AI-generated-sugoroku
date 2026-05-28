@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_05_28_012620) do
+ActiveRecord::Schema[7.1].define(version: 2026_05_28_022041) do
   create_table "games", force: :cascade do |t|
     t.integer "map_id", null: false
     t.integer "num_of_players"
     t.integer "current_turn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "game_status"
     t.index ["map_id"], name: "index_games_on_map_id"
   end
 
