@@ -13,9 +13,16 @@ map_id: map:references
 num_of_players:integer
 
 current_turn:integer
+(こっちは総経過ターン)
+
+current_player:integer
+(こっちは今のターンを行うプレイヤー)
 
 game_status: integer
 (0: 進行中, 1: 終了済)
+
+mode: integer
+(0: 単一端末(全員未ログイン), 1: 単一端末(1人だけ(マップ作成者)ログイン), 2: 複数端末)
 
 
 
