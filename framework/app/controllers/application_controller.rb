@@ -69,4 +69,14 @@ class ApplicationController < ActionController::Base
       )
     end
   end
+
+  # サイコロを振る関数.
+  def roll
+    
+  end
+
+  # ゲーム終了処理をする関数.
+  def end_sugoroku
+    
+  end
 end
