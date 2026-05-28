@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  map: one
+  position: 1
+  square_type: MyString
+  square_text: MyString
+  effect: MyString
+  value: 1
+
+two:
+  map: two
+  position: 1
+  square_type: MyString
+  square_text: MyString
+  effect: MyString
+  value: 1

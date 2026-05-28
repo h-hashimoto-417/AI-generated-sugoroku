@@ -1,0 +1,60 @@
+Map
+
+map_name:string
+
+num_of_squares:integer
+
+
+
+Game
+
+map_id: map:references
+
+num_of_players:integer
+
+current_turn:integer
+
+
+
+User
+
+uname:string
+
+password_digest:string
+
+
+
+Player
+
+game_id: game:references
+
+pname: string
+
+user_id: user:references
+
+curr_position: integer
+
+ucolor: string
+
+status:boolean
+
+turn_skip:integer
+
+turn_order:integer
+
+
+
+Square
+
+map_id: Map:references
+
+position:integer
+
+square_type:string
+
+square_text:string
+
+effect:string
+
+value:integer 
+
