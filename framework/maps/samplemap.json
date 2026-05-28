@@ -1,0 +1,119 @@
+{
+  "title": "古都から首都へ！東海道徒歩の旅すごろく",
+  "squares": [
+    {
+      "type": "start",
+      "text": "京都 三条大橋を出発！いざ、東京へ！",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "京都の風情に浸りすぎて時間を忘れました。１回休み。",
+      "effect": "skip",
+      "value": 1
+    },
+    {
+      "type": "event",
+      "text": "滋賀県 逢坂の関を越える！順調に進んで1マス進む！",
+      "effect": "move",
+      "value": 1
+    },
+    {
+      "type": "event",
+      "text": "琵琶湖の絶景に感動！足取りも軽くなり2マス進む！",
+      "effect": "move",
+      "value": 2
+    },
+    {
+      "type": "event",
+      "text": "宿場町で美味しい近江牛を食べすぎました。1マス戻る。",
+      "effect": "move",
+      "value": -1
+    },
+    {
+      "type": "event",
+      "text": "岐阜県突入！山道が続くが、景色に癒されもう一度サイコロを振る！",
+      "effect": "roll_again",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "関ヶ原の古戦場跡で歴史の重みを感じました。効果なし。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "愛知県 名古屋城が見えた！あと3マス進む！",
+      "effect": "move",
+      "value": 3
+    },
+    {
+      "type": "event",
+      "text": "熱田神宮で旅の安全を祈願。もう一度サイコロを振る！",
+      "effect": "roll_again",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "三河の宿場で疲労困憊。今日はここで一泊、1回休み。",
+      "effect": "skip",
+      "value": 1
+    },
+    {
+      "type": "event",
+      "text": "静岡県突入！ついに富士山が見えてきた！2マス進む！",
+      "effect": "move",
+      "value": 2
+    },
+    {
+      "type": "event",
+      "text": "大井川を渡るのに手間取り、予定より遅れて1マス戻る。",
+      "effect": "move",
+      "value": -1
+    },
+    {
+      "type": "event",
+      "text": "お茶畑で休憩。美味しい静岡茶に癒され、効果なし。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "駿河湾の景色に魅了され、足取りが軽くなる！2マス進む！",
+      "effect": "move",
+      "value": 2
+    },
+    {
+      "type": "event",
+      "text": "神奈川県 箱根の山越えで体力を消耗。今日はゆっくり休んで1回休み。",
+      "effect": "skip",
+      "value": 1
+    },
+    {
+      "type": "event",
+      "text": "小田原城を見て気合を入れ直す！もう一度サイコロを振る！",
+      "effect": "roll_again",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "横浜の賑わいに圧倒され、少し迷って1マス戻る。",
+      "effect": "move",
+      "value": -1
+    },
+    {
+      "type": "event",
+      "text": "東京タワーが見えてきた！ゴールは目前、ラストスパートで3マス進む！",
+      "effect": "move",
+      "value": 3
+    },
+    {
+      "type": "goal",
+      "text": "日本橋に到着！京都から東京まで歩ききった！",
+      "effect": "finish",
+      "value": 0
+    }
+  ]
+}

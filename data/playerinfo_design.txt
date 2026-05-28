@@ -1,0 +1,12 @@
+プレイヤー情報の設計：
+持つべき情報
+
+プレイヤー名 -> string
+ユーザid -> integer or string
+現在地 -> integer
+コマの色 -> string or integer
+状態(ゴール、未ゴール)　-> boolean or integer
+状態異常(〇回休みなど) -> integer
+順番 -> integer 
+
+rails g model Player pname:string uid:string current_position:integer user_color:string game_status:boolean turn_skip:integer turn_order:integer
