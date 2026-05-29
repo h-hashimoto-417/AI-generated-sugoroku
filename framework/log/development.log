@@ -2916,3 +2916,125 @@ Processing by HomeController#generate as HTML
 Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1937)
 
 
+Started GET "/" for 127.0.0.1 at 2026-05-27 17:14:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/akane/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/akane/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 342)
+Completed 200 OK in 39ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 6957)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-05-27 17:15:27 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 8.4ms | Allocations: 620)
+  Rendered layout layouts/application.html.erb (Duration: 593.4ms | Allocations: 101734)
+Completed 200 OK in 599ms (Views: 597.2ms | ActiveRecord: 0.0ms | Allocations: 102607)
+
+
+Started POST "/home/generate" for 127.0.0.1 at 2026-05-27 17:15:30 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1150)
+Completed 200 OK in 24ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3700)
+
+
+Started GET "/play" for 127.0.0.1 at 2026-05-27 17:15:31 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 1.0ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1279)
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1694)
+
+
+Started GET "/" for 127.0.0.1 at 2026-05-27 17:21:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/akane/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/akane/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 342)
+Completed 200 OK in 28ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4131)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-05-27 17:21:57 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 5.8ms | Allocations: 620)
+  Rendered layout layouts/application.html.erb (Duration: 304.9ms | Allocations: 31895)
+Completed 200 OK in 309ms (Views: 308.1ms | ActiveRecord: 0.0ms | Allocations: 32768)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (5.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-05-28 01:26:52.733786', '2026-05-28 01:26:52.733791') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMaps (20260528011846)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "maps" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "map_name" varchar, "num_of_squares" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528011846') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20260528012355)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "map_id" integer NOT NULL, "num_of_players" integer, "current_turn" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d8a74d8f3f"
+FOREIGN KEY ("map_id")
+  REFERENCES "maps" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_games_on_map_id" ON "games" ("map_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528012355') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20260528012426)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "uname" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528012426') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePlayers (20260528012538)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer NOT NULL, "pname" varchar, "user_id" integer NOT NULL, "curr_position" integer, "ucolor" varchar, "string" varchar, "status" boolean, "turn_skip" integer, "turn_order" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d71756309d"
+FOREIGN KEY ("game_id")
+  REFERENCES "games" ("id")
+, CONSTRAINT "fk_rails_224cac07ce"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_players_on_game_id" ON "players" ("game_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_players_on_user_id" ON "players" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528012538') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSquares (20260528012620)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "squares" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "map_id" integer NOT NULL, "position" integer, "square_type" varchar, "square_text" varchar, "effect" varchar, "value" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_400129d7a3"
+FOREIGN KEY ("map_id")
+  REFERENCES "maps" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_squares_on_map_id" ON "squares" ("map_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528012620') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddStatusToGames (20260528022041)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "games" ADD "game_status" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528022041') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCurrentPlayerToGames (20260528063528)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "games" ADD "current_player" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528063528') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddModeToGames (20260528080609)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "games" ADD "mode" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528080609') RETURNING "version"[0m
+  [1m[36mTRANSACTION (33.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

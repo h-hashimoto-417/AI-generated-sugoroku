@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game: one
+  pname: MyString
+  user: one
+  curr_position: 1
+  ucolor: MyString
+  string: MyString
+  status: false
+  turn_skip: 1
+  turn_order: 1
+
+two:
+  game: two
+  pname: MyString
+  user: two
+  curr_position: 1
+  ucolor: MyString
+  string: MyString
+  status: false
+  turn_skip: 1
+  turn_order: 1

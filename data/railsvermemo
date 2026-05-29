@@ -1,0 +1,5 @@
+.ruby-version -> 4.0.4
+Gemfile ->
+"ruby "4.0.4""
+gem "sqlite3", "~> 2.9.4"
+に書き換えれば動く(多分)
