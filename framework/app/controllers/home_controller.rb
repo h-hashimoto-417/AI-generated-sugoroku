@@ -1,3 +1,7 @@
+require "json"
+require "net/http"
+require "uri"
+
 class HomeController < ApplicationController
   def top
   end
@@ -8,6 +12,12 @@ class HomeController < ApplicationController
     # 生成した盤面とイベントをビューに渡す
     # render :top, locals: { board: board, events: events }
     prompt = params[:prompt]
+    #results = call_ai_api(build_prompt(prompt))
+    results = [
+  { story: "スタート地点" },
+  { story: "モンスター" }
+]
+    @sugoroku = results.map { |result| result[:story] }
     puts "GENERATE ACTION CALLED"
     #render :generate
     #redirect_to("/home/show_result")
