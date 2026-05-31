@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  map: one
+  num_of_players: 1
+  current_turn: 1
+
+two:
+  map: two
+  num_of_players: 1
+  current_turn: 1
