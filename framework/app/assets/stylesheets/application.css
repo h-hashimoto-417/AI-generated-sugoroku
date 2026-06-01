@@ -152,21 +152,28 @@
  }
 
  .generate-button {
-    padding: 15px 30px;
+    width: 280px;
+    height: 80px;
+    /* padding: 15px 30px; */
+    background: transparent;
     font-size: 24px;
     font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
     color: #DDD1A5;
     background-image: url("/assets/button_blue.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: none;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     cursor: pointer;
  }
  .generate-button:active {
-  transform: scale(0.95);
+  transform: scale(0.90);
   opacity: 0.7;
  }
  .generate-button:hover {
-  background-color: #357abd;
+  transform: scale(1.05);
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -198,10 +205,11 @@
     cursor: pointer;
  }
  .action-button:active {
-  transform: scale(0.95);
+  transform: scale(0.90);
   opacity: 0.7;
  }
  .action-button:hover {
-  background-color: #357abd;
+  transform: scale(1.05);
+  opacity: 0.8;
   cursor: pointer;
 }
