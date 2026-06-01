@@ -26,42 +26,18 @@
    font-family: 'Dela Gothic One', 'Arial Narrow', Arial, sans-serif;
    position: relative;
    display: inline-block;
-   text-shadow:
-    5px 5px 0 #68241e;
+   
+    z-index: 0;
  }
 
-
-.title-ai1::before {
-  content: "";
-
+.heart-bg {
   position: absolute;
-
-  width: 150px;
-  height: 150px;
-  background-color: red;
-  left: 50%;
-  top: 50%;
+  width: 450px;
+  left: 70%;
+  top: 70%;
   transform: translate(-50%, -50%);
-  background-image: url("../images/heart.PNG");
-  background-color: transparent;
-}
-
-
-
- .title-ai::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-image: url("../images/heart.PNG");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 10%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  border: 3px solid red;
-
+  opacity: 0.5;
+  z-index: -1;
 }
 
  .title-suru {
