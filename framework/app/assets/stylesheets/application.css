@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ body {
+   background-image: url("/assets/back.PNG");
+
+ }
+
  .home-header {
    background-color: #E6DCB2;
    text-align: center;
@@ -27,7 +32,7 @@
    position: relative;
    display: inline-block;
    
-    z-index: 0;
+   z-index: 0;
  }
 
 .heart-bg {
@@ -96,7 +101,8 @@
     padding: 10px;
     font-size:20px;
     border-radius:20px;
-    border:2px solid rgb(147, 147, 147);
+    border:2px solid rgb(0, 0, 0);
+    opacity: 0.6;
  }
 
  .generate-button {
