@@ -23,6 +23,8 @@
    background-color: #E6DCB2;
    text-align: center;
    padding: 40px 0;
+   outline: 3px solid #9B3B32;
+   outline-offset: -20px;
  }
 
  .title-ai {
@@ -31,7 +33,7 @@
    font-family: 'Dela Gothic One', 'Arial Narrow', Arial, sans-serif;
    position: relative;
    display: inline-block;
-   
+   text-shadow: 5px 5px 0 #57201b;
    z-index: 0;
  }
 
@@ -41,12 +43,12 @@
   left: 70%;
   top: 70%;
   transform: translate(-50%, -50%);
-  opacity: 0.5;
+  opacity: 0.4;
   z-index: -1;
 }
 
  .title-suru {
-   color: #687786;
+   color: #323a42;
    font-size: 50px;
    font-family: 'Monomaniac One', 'Arial Narrow', Arial, sans-serif;
  }
@@ -55,6 +57,8 @@
    color: #687786;
    font-size: 110px;
    font-family: 'Darumadrop One', 'Arial Narrow', Arial, sans-serif;
+   -webkit-text-stroke: 5px #323a42;
+   paint-order: stroke;
  }
 
  .header {
@@ -100,8 +104,12 @@
     
     padding: 10px;
     font-size:20px;
-    border-radius:20px;
-    border:2px solid rgb(0, 0, 0);
+    background-color: #e2dcc4a0;
+    border-radius:10px;
+    border-top:4px solid #687786;
+    border-left:12px solid #687786;
+    border-right:8px solid #687786;
+    border-bottom:10px solid #687786;
     opacity: 0.6;
  }
 
