@@ -29,7 +29,8 @@
 
  .border-decor {
    border: 3px solid #9B3B32;
-   padding-bottom: 13px;
+   padding-bottom: 15px;
+   padding-top: 5px;
  }
 
  .title-ai {
@@ -38,13 +39,13 @@
    font-family: 'Dela Gothic One', 'Arial Narrow', Arial, sans-serif;
    position: relative;
    display: inline-block;
-   text-shadow: 5px 5px 0 #57201b;
+   /* text-shadow: 5px 5px 0 #57201b; */
    z-index: 0;
  }
 
 .heart-bg {
   position: absolute;
-  width: 450px;
+  width: 420px;
   left: 70%;
   top: 70%;
   transform: translate(-50%, -50%);
@@ -53,7 +54,7 @@
 }
 
  .title-suru {
-   color: #323a42;
+   color: #687786;
    font-size: 50px;
    font-family: 'Monomaniac One', 'Arial Narrow', Arial, sans-serif;
  }
@@ -65,6 +66,31 @@
    /* -webkit-text-stroke: 5px #323a42;
    paint-order: stroke; */
  }
+  
+.title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* 背景の文字 */
+.bg-text {
+  font-size: 100px;
+  color: #687786;
+  font-family: 'Darumadrop One', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1;
+}
+/* 前景の文字 */
+.fg-text {
+  position: absolute;
+  inset: 0;
+  font-size: 96px;
+  font-family: 'Darumadrop One', 'Arial Narrow', Arial, sans-serif;
+  color: #687786;
+  -webkit-text-stroke: 1px #9B3B32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
  .header {
    display: flex;
