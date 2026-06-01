@@ -2,12 +2,14 @@
     <button class="login-button">ログイン</button>
 </div>
 <h1 class="home-header">
-    <span class="title-ai">
-     <%= image_tag "heart2.PNG", class: "heart-bg" %>
-     AI
-    </span>
-    <span class="title-suru">する</span>
-    <span class="title-sugoroku">スゴロク</span>
+    <div class="border-decor">
+        <span class="title-ai">
+        <%= image_tag "heart2.PNG", class: "heart-bg" %>
+        AI
+        </span>
+        <span class="title-suru">する</span>
+        <span class="title-sugoroku">スゴロク</span>
+    </div>
 </h1>
 
 <%= form_with url: "/home/generate", method: :post, data: { turbo: false } do %>

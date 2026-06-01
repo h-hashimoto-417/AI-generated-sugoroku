@@ -22,14 +22,19 @@
  .home-header {
    background-color: #E6DCB2;
    text-align: center;
-   padding: 40px 0;
-   outline: 3px solid #9B3B32;
+   padding: 30px 30px;
+   outline: 8px solid #687786;
    outline-offset: -20px;
+ }
+
+ .border-decor {
+   border: 3px solid #9B3B32;
+   padding-bottom: 13px;
  }
 
  .title-ai {
    color: #9B3B32;
-   font-size: 100px;
+   font-size: 90px;
    font-family: 'Dela Gothic One', 'Arial Narrow', Arial, sans-serif;
    position: relative;
    display: inline-block;
@@ -55,10 +60,10 @@
 
  .title-sugoroku {
    color: #687786;
-   font-size: 110px;
+   font-size: 100px;
    font-family: 'Darumadrop One', 'Arial Narrow', Arial, sans-serif;
-   -webkit-text-stroke: 5px #323a42;
-   paint-order: stroke;
+   /* -webkit-text-stroke: 5px #323a42;
+   paint-order: stroke; */
  }
 
  .header {
@@ -83,13 +88,14 @@
  }
  .content-right {
     text-align: right;
-    margin-top: 30px;
-    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
  }
 
  .login-button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 7px 14px;
+    font-size: 14px;
     color: #28a745;
     background-color: white;
     border: none;
