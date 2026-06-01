@@ -3038,3 +3038,23 @@ Migrating to AddModeToGames (20260528080609)
   [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528080609') RETURNING "version"[0m
   [1m[36mTRANSACTION (33.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/home" for ::1 at 2026-06-01 12:17:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2861)
+  Rendered layout layouts/application.html.erb (Duration: 829.6ms | Allocations: 100204)
+Completed 200 OK in 839ms (Views: 832.7ms | ActiveRecord: 0.0ms | Allocations: 106978)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-01 12:17:34 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 1.2ms | Allocations: 164)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1190)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 1699)
+
+
