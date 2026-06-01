@@ -1,7 +1,11 @@
 <div class="content-right">
     <button class="login-button">ログイン</button>
 </div>
-<h1 class="home-header">AIするスゴロク</h1>
+<h1 class="home-header">
+    <span class="title-ai">AI</span>
+    <span class="title-suru">する</span>
+    <span class="title-sugoroku">スゴロク</span>
+</h1>
 <%= form_with url: "/home/generate", method: :post, data: { turbo: false } do %>
     <div class="content-center">
         <textarea 
