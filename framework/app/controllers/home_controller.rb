@@ -24,10 +24,27 @@ class HomeController < ApplicationController
 
     result = AiService.generate(prompt)
 
+    map = Map.create!(
+      map_name: result["title"],
+      num_of_squares: result["squares"].length
+    )
+
+    session[:map_id] = map.id
+
+    result["squares"].each_with_index do |square, index|
+      map.squares.create!(
+        position: index + 1,
+        square_type: square["type"],
+        square_text: square["text"],
+        effect: square["effect"],
+        value: square["value"]
+      )
+    end
+
     Rails.logger.info("AI生成成功")
     Rails.logger.info(result.inspect)
 
-    @sugoroku = "AI生成成功: #{result["title"]}"
+    @sugoroku = "AI生成成功: #{map.map_name}"
 
     render :generate
 
