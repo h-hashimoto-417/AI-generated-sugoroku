@@ -2,7 +2,10 @@ require "json"
 require "net/http"
 require "uri"
 
+# p ENV["GEMINI_API_KEY"]
+
 def build_prompt(user_input)
+    puts "ユーザーの入力をもとにプロンプトを生成します..."
     prompt = <<~TEXT
         あなたはスゴロクゲームの盤面を作成するAIです
 
@@ -28,6 +31,7 @@ def build_prompt(user_input)
         JSON以外の説明文は書かないでください。
     TEXT
 
+    puts "ユーザーの入力をもとにプロンプトを生成しました:"
     prompt
 end
 
@@ -38,7 +42,7 @@ def call_ai_api(prompt)
 
     request = Net::HTTP::Post.new(uri)
     request["Content-Type"] = "application/json"
-
+    puts "APIにリクエストを送信します..."
     request.body = {
         :contents => [
             {
@@ -58,10 +62,13 @@ def call_ai_api(prompt)
     if data["error"]
         puts "API Error:"
         puts data["error"]["message"]
+        puts "API Response:"
+        puts response.body
         exit
     end
 
     usage = data["usageMetadata"]
+    puts "API Response:"
 
     if usage
         puts "===== Token Usage ====="
@@ -76,20 +83,23 @@ def call_ai_api(prompt)
         puts "======================="
     else
         puts "Token usage information is not available."
+        puts "API Response:"
+        puts response.body
     end
 
     text = data["candidates"][0]["content"]["parts"][0]["text"]
 
     text = text.gsub(/```json|```/, "").strip
-
-    JSON.parse(text)
+    
+    puts "resultに代入"
+    result = JSON.parse(text)
     unless result["title"] && result["squares"]
         puts "JSON format error"
         exit
     end
 
     result["squares"].each do |square|
-        unless square["type"] && square["text"] && sqaure["effect"]
+        unless square["type"] && square["text"] && square["effect"]
             puts "Invalid square data"
             exit
         end

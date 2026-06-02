@@ -3058,3 +3058,164 @@ Processing by HomeController#generate as HTML
 Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 1699)
 
 
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home/generate" for ::1 at 2026-06-03 04:39:24 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 04:39:25 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 124.9ms | Allocations: 38258)
+  Rendered layout layouts/application.html.erb (Duration: 129.2ms | Allocations: 53037)
+Completed 200 OK in 132ms (Views: 130.3ms | ActiveRecord: 0.0ms | Allocations: 54789)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 04:39:35 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬と猫"}
+Completed 500 Internal Server Error in 10493ms (ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+  
+NameError (undefined local variable or method 'result' for an instance of HomeController):
+  
+app/controllers/home_controller.rb:16:in 'HomeController#generate'
+Started GET "/home" for ::1 at 2026-06-03 04:59:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 3.7ms | Allocations: 690)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1637)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 1846)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 04:59:14 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬と猫"}
+Completed 500 Internal Server Error in 9734ms (ActiveRecord: 0.0ms | Allocations: 1858)
+
+
+  
+NameError (undefined local variable or method 'result' for an instance of HomeController):
+  
+app/controllers/home_controller.rb:16:in 'HomeController#generate'
+Started GET "/home" for ::1 at 2026-06-03 05:02:48 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 691)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1638)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 1851)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 05:02:53 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬と猫"}
+Completed 500 Internal Server Error in 12156ms (ActiveRecord: 0.0ms | Allocations: 1967)
+
+
+  
+NameError (undefined local variable or method 'result' for an instance of HomeController):
+  
+app/controllers/home_controller.rb:16:in 'HomeController#generate'
+Started GET "/home/generate" for ::1 at 2026-06-03 05:04:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 05:04:38 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 693)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1640)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 1849)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 05:05:03 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "京都から東京まで歩いて行こう"}
+Completed 500 Internal Server Error in 12156ms (ActiveRecord: 0.0ms | Allocations: 1882)
+
+
+  
+NameError (undefined local variable or method 'result' for an instance of HomeController):
+  
+app/controllers/home_controller.rb:16:in 'HomeController#generate'
+Started GET "/home/generate" for ::1 at 2026-06-03 05:08:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 05:08:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 1.8ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 15616)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 16424)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 05:08:43 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "京都から東京まで歩いて行こう"}
+Completed 500 Internal Server Error in 10989ms (ActiveRecord: 0.0ms | Allocations: 1857)
+
+
+  
+NameError (undefined local variable or method 'result' for an instance of HomeController):
+  
+app/controllers/home_controller.rb:17:in 'HomeController#generate'
+Started GET "/home/generate" for ::1 at 2026-06-03 05:11:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 05:11:46 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 15615)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 16420)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 05:12:00 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "京都から東京まで歩いて行こう"}
+Completed 500 Internal Server Error in 14830ms (ActiveRecord: 0.0ms | Allocations: 1980)
+
+
+  
+NameError (undefined local variable or method 'result' for an instance of HomeController):
+  
+app/controllers/home_controller.rb:19:in 'HomeController#generate'
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home/generate" for ::1 at 2026-06-03 05:25:14 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 05:25:15 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 21.0ms | Allocations: 18605)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 33480)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 35231)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 05:25:24 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬と猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.1ms | Allocations: 638)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1571)
+Completed 200 OK in 10211ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3634)
+
+

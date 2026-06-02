@@ -1,7 +1,7 @@
 require "json"
 require "net/http"
 require "uri"
-require '../api/AI_api'
+require_relative '../../../api/AI_api'
 
 class HomeController < ApplicationController
   def top
@@ -12,16 +12,13 @@ class HomeController < ApplicationController
     # 例: ai_service = AIService.new; board, events = ai_service.generate_sugoroku
     # 生成した盤面とイベントをビューに渡す
     # render :top, locals: { board: board, events: events }
-    prompt = params[:prompt]
-    #results = call_ai_api(build_prompt(prompt))
-    results = [
-  { story: "スタート地点" },
-  { story: "モンスター" },
-  { story: "宝箱" },
-  { story: "イベント" },
-  { story: "ゴール地点" }
-  ]
-    @sugoroku = results.map { |result| result[:story] }
+    user_input = params[:prompt]
+    puts "promptに代入"
+    prompt = build_prompt(user_input)
+    puts "promptに代入しました"
+    results = call_ai_api(prompt)
+
+    @sugoroku = results
     puts JSON.pretty_generate(results)
     #render :generate
     #redirect_to("/home/show_result")
