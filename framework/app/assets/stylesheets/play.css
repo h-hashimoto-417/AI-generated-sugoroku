@@ -41,11 +41,15 @@
 }
 
 .square {
-  width: 150px;
-  height: 150px;
-  background-color: #f0f0f0;
+  transform: skewX(-30deg);
+  width: 90px;
+  height: 60px;
+  background-color: #6A686D;
   border: 2px solid #333;
   border-radius: 10px;
+  outline: 2px dotted #E8948D;
+  outline-offset: -7px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
   padding: 10px;
   display: flex;
   justify-content: center;
