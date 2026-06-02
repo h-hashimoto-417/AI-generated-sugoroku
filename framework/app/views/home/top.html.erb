@@ -26,7 +26,15 @@
     <div class="content-center">
         <button 
         type="submit"
+        data-loading="ai"
         class="generate-button"
         >生成</button>
     </div>
 <% end %>
+
+<!-- ローディングUI（レイアウトに1回だけ置く） -->
+<div id="loading-overlay" class="loading-overlay hidden">
+  <div class="loading-box">
+    生成中…
+  </div>
+</div>

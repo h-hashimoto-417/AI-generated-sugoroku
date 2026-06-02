@@ -40,6 +40,14 @@
   flex-wrap: wrap;
 }
 
+.show-map-title {
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+}
+
 .square {
   transform: skewX(-30deg);
   width: 90px;
