@@ -18,9 +18,9 @@
     <h2 class="show-result">生成完了！</h2>
     <div class="sugoroku-display">
       <div id="board">
-        <% @sugoroku.each do |cell| %>
+        <% @sugoroku.each do |square| %>
           <div class="square">
-            <%= cell["text"] %>
+            <!--%= square[:story] %-->
           </div>
         <% end %>
       </div>

@@ -1,6 +1,7 @@
 require "json"
 require "net/http"
 require "uri"
+require '../api/AI_api'
 
 class HomeController < ApplicationController
   def top
@@ -15,10 +16,13 @@ class HomeController < ApplicationController
     #results = call_ai_api(build_prompt(prompt))
     results = [
   { story: "スタート地点" },
-  { story: "モンスター" }
-]
+  { story: "モンスター" },
+  { story: "宝箱" },
+  { story: "イベント" },
+  { story: "ゴール地点" }
+  ]
     @sugoroku = results.map { |result| result[:story] }
-    puts "GENERATE ACTION CALLED"
+    puts JSON.pretty_generate(results)
     #render :generate
     #redirect_to("/home/show_result")
   end

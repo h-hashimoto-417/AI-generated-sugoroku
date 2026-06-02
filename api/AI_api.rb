@@ -93,20 +93,23 @@ def call_ai_api(prompt)
             puts "Invalid square data"
             exit
         end
+    end
 end
 
-puts "作りたいスゴロクのテーマを入力してください : "
-user_input = gets.chomp
+if __FILE__ == $PROGRAM_NAME
+    puts "作りたいスゴロクのテーマを入力してください : "
+    user_input = gets.chomp
 
-prompt = build_prompt(user_input)
+    prompt = build_prompt(user_input)
 
-result = call_ai_api(prompt)
+    result = call_ai_api(prompt)
 
-puts JSON.pretty_generate(result)
+    puts JSON.pretty_generate(result)
 
-File.write(
-    "api/generated_map.json",
-    JSON.pretty_generate(result)
-)
+    File.write(
+        "api/generated_map.json",
+        JSON.pretty_generate(result)
+    )
 
-puts "generated_map.jsonに保存しました"
+    puts "generated_map.jsonに保存しました"
+end
