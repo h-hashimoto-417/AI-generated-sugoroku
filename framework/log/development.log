@@ -2771,3 +2771,226 @@ Migrating to AddModeToGames (20260528080609)
   [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260528080609') RETURNING "version"[0m
   [1m[36mTRANSACTION (33.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2026-05-31 20:26:17 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/JCLee/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/JCLee/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 342)
+Completed 200 OK in 10ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 6956)
+
+
+Started GET "/home" for ::1 at 2026-06-02 12:40:41 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.4ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 1064.2ms | Allocations: 99662)
+Completed 200 OK in 1067ms (Views: 1066.0ms | ActiveRecord: 0.0ms | Allocations: 100539)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 12:40:49 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "jljl"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1157)
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 3708)
+
+
+Started GET "/play" for ::1 at 2026-06-02 12:40:52 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1304)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1716)
+
+
+Started GET "/play" for ::1 at 2026-06-02 12:41:01 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1178)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1390)
+
+
+Started GET "/home" for ::1 at 2026-06-02 12:41:07 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1283)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1495)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 12:41:09 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "kk"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1038)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1434)
+
+
+Started GET "/play" for ::1 at 2026-06-02 12:41:10 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1177)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1385)
+
+
+Started GET "/home" for ::1 at 2026-06-02 12:41:36 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.9ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1273)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1481)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 12:41:49 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "ㅁㄴㅇㄹㅁㄴㅇㄹ"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1038)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1439)
+
+
+Started GET "/play" for ::1 at 2026-06-02 12:41:58 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1184)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1392)
+
+
+Started GET "/" for ::1 at 2026-06-02 12:45:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/JCLee/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/JCLee/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 342)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 4131)
+
+
+Started GET "/home" for ::1 at 2026-06-02 12:45:49 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1669)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 32848)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 33724)
+
+
+Started GET "/home" for ::1 at 2026-06-02 22:12:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1779)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 33000)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 36948)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 22:12:33 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "東京から京都まで歩いて行こう"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.5ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1153)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1668)
+
+
+Started GET "/play" for ::1 at 2026-06-02 22:14:20 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1301)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1716)
+
+
+Started GET "/home/generate" for ::1 at 2026-06-02 22:17:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home/generate" for ::1 at 2026-06-02 22:17:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-02 22:17:58 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1780)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 33000)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 36948)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 22:18:17 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "東京から京都まで歩いて行こう"}
+AI生成エラー
+GEMINI_API_KEYが設定されていません
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1157)
+Completed 200 OK in 36ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 23924)
+
+
+Started GET "/home" for ::1 at 2026-06-02 22:21:10 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.8ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1278)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1491)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 22:21:24 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "東京から京都まで歩いて行こう\r\n"}
+AI生成エラー
+GEMINI_API_KEYが設定されていません
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1039)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1792)
+
+
+Started GET "/home" for ::1 at 2026-06-02 22:22:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1777)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 32995)
+Completed 200 OK in 33ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 36943)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-02 22:23:03 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "東京から京都まで歩いて行こう\r\n"}
+AI生成成功
+{"title" => "東海道五十三次！東京〜京都 徒歩の旅スゴロク", "squares" => [{"type" => "start", "text" => "東京・日本橋を出発！いざ京都へ！", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "最初の宿場町、品川宿に到着。地元の名物で腹ごしらえ。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "富士山が綺麗に見えた！気分爽快、1マス進む！", "effect" => "move", "value" => 1}, {"type" => "event", "text" => "大井川の渡河に手間取る。橋がない！1回休み。", "effect" => "skip", "value" => 1}, {"type" => "event", "text" => "親切な旅人からおにぎりをもらう。力が湧いて、もう一度サイコロを振る！", "effect" => "roll_again", "value" => 0}, {"type" => "event", "text" => "道に迷ってしまい、時間をロス。2マス戻る。", "effect" => "move", "value" => -2}, {"type" => "event", "text" => "琵琶湖の絶景に感動！ついつい長居してしまい1回休み。", "effect" => "skip", "value" => 1}, {"type" => "event", "text" => "旅の途中で良い出会い！談笑し、さらに1マス進む！", "effect" => "move", "value" => 1}, {"type" => "event", "text" => "鈴鹿峠を越え、近江の国へ。京都はもうすぐだ！", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "突然の夕立に遭い、ずぶ濡れに。風邪をひいて、体調回復のため1回休み。", "effect" => "skip", "value" => 1}, {"type" => "event", "text" => "京都の町並みが遠くに見えてきた！ラストスパートで2マス進む！", "effect" => "move", "value" => 2}, {"type" => "goal", "text" => "京都・三条大橋に到着！お疲れ様でした！", "effect" => "finish", "value" => 0}]}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1157)
+Completed 200 OK in 10092ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 10939)
+
+
