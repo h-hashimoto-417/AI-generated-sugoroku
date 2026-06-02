@@ -17,15 +17,21 @@
 <div class="content-center">
     <h2 class="show-result">生成完了！</h2>
     <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
-    <div class="sugoroku-display">
-      <div id="board">
-        <% @sugoroku["squares"].each do |square| %>
-          <div class="square">
-            <%= square["text"] %>
-          </div>
-        <% end %>
-      </div>
+    <div id="board">
+      <!-- 線用レイヤー -->
+      <svg id="lines"></svg>
+
+      <!-- マス用レイヤー -->
+      <div id="map"></div>
     </div>
+
+    <script>
+      // RailsのデータをJSに渡す（重要）
+      const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+    </script>
+
+    <!-- 外部JS読み込み -->
+    <%= javascript_include_tag "sugoroku_map" %>
 </div>
 
 <!-- ボタンの表示 -->

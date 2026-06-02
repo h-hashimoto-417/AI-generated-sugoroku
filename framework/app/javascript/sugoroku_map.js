@@ -1,0 +1,63 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const cols = 7;
+  const size = 130;
+
+  const map = document.getElementById("map");
+  const svg = document.getElementById("lines");
+
+  const squares = sugoroku.squares;
+
+  const positions = [];
+
+  console.log("squaresの表示");
+
+  // --- マス生成 ---
+  squares.forEach((square, index) => {
+    const row = Math.floor(index / cols);
+    const colInRow = index % cols;
+    console.log("index: %d, row: %d, colInRow: %d", index, row, colInRow);
+
+    const col = row % 2 === 0
+      ? colInRow
+      : (cols - 1 - colInRow);
+
+    const x = col * size;
+    const y = row * size;
+
+    positions.push({ x: x + 40, y: y + 40 }); // 中心点
+
+    const div = document.createElement("div");
+    div.className = "square";
+    // div.innerText = square.text;
+
+    div.style.left = `${x}px`;
+    div.style.top = `${y}px`;
+
+    map.appendChild(div);
+  });
+
+  // --- 線描画関数 ---
+  function drawLine(x1, y1, x2, y2) {
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+
+    line.setAttribute("x1", x1);
+    line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2);
+    line.setAttribute("y2", y2);
+
+    line.setAttribute("stroke", "#dac9a8");
+    line.setAttribute("stroke-width", "16");
+
+    svg.appendChild(line);
+  }
+
+  // --- マス同士を接続 ---
+  for (let i = 0; i < positions.length - 1; i++) {
+    drawLine(
+      positions[i].x,
+      positions[i].y,
+      positions[i + 1].x,
+      positions[i + 1].y
+    );
+  }
+});
