@@ -19,7 +19,7 @@
     <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
     <div class="sugoroku-display">
       <div id="board">
-        <% @sugoroku.each do |square| %>
+        <% @sugoroku["squares"].each do |square| %>
           <div class="square">
             <!--%= square[:story] %-->
           </div>

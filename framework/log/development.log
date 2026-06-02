@@ -3478,3 +3478,101 @@ ActionView::Template::Error (no implicit conversion of String into Integer):
     22:         <% @sugoroku.each do |square| %>
   
 app/views/home/generate.html.erb:19:in '_app_views_home_generate_html_erb__1521503904045053655_15056'
+Started GET "/home/generate" for ::1 at 2026-06-03 06:35:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 06:35:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 933)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 15608)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 16412)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:35:11 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.1ms | Allocations: 642)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1569)
+Completed 200 OK in 11466ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3382)
+
+
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home" for ::1 at 2026-06-03 06:39:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 145.8ms | Allocations: 39905)
+  Rendered layout layouts/application.html.erb (Duration: 150.0ms | Allocations: 54724)
+Completed 200 OK in 154ms (Views: 151.3ms | ActiveRecord: 0.0ms | Allocations: 58672)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:39:50 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2233)
+Completed 500 Internal Server Error in 10447ms (ActiveRecord: 0.0ms | Allocations: 4538)
+
+
+  
+ActionView::Template::Error (undefined method '[]' for nil):
+    16: <!-- 生成されたすごろくの表示 -->
+    17: <div class="content-center">
+    18:     <h2 class="show-result">生成完了！</h2>
+    19:     <h3 class="show-map-title"><%= @sugoroku[0]["title"] %></h3>
+    20:     <div class="sugoroku-display">
+    21:       <div id="board">
+    22:         <% @sugoroku.each do |square| %>
+  
+app/views/home/generate.html.erb:19:in '_app_views_home_generate_html_erb___2808365443203876081_9224'
+Started GET "/home/generate" for ::1 at 2026-06-03 06:40:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/home" for ::1 at 2026-06-03 06:40:35 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 3.0ms | Allocations: 926)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 15599)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 16407)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:40:43 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.2ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1572)
+Completed 200 OK in 12027ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3236)
+
+
+Started GET "/home" for ::1 at 2026-06-03 06:41:49 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 1.5ms | Allocations: 928)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 15601)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 16442)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:41:57 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.0ms | Allocations: 644)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1571)
+Completed 200 OK in 10838ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3311)
+
+

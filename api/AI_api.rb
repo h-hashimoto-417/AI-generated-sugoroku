@@ -104,6 +104,7 @@ def call_ai_api(prompt)
             exit
         end
     end
+    result
 end
 
 if __FILE__ == $PROGRAM_NAME
