@@ -40,6 +40,13 @@
   flex-wrap: wrap;
 }
 
+.sugoroku-display {
+  width: 80%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+}
+
 .show-map-title {
   margin-top: 10px;
   font-size: 24px;

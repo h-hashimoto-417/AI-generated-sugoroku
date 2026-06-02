@@ -21,7 +21,7 @@
       <div id="board">
         <% @sugoroku["squares"].each do |square| %>
           <div class="square">
-            <!--%= square[:story] %-->
+            <%= square["text"] %>
           </div>
         <% end %>
       </div>

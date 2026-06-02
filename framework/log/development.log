@@ -3576,3 +3576,43 @@ Processing by HomeController#generate as HTML
 Completed 200 OK in 10838ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3311)
 
 
+Started POST "/home/generate" for ::1 at 2026-06-03 06:46:34 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.3ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4111)
+Completed 200 OK in 12422ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 5650)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:47:39 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.3ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4136)
+Completed 200 OK in 10348ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 5704)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:48:17 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.3ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4219)
+Completed 200 OK in 12343ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 6098)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 06:51:05 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.3ms | Allocations: 732)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 15240)
+Completed 200 OK in 10591ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 17614)
+
+
