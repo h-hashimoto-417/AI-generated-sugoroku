@@ -3898,3 +3898,127 @@ Processing by HomeController#generate as HTML
 Completed 200 OK in 9085ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 18642)
 
 
+Started POST "/home/generate" for ::1 at 2026-06-03 09:39:11 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2686)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 16858)
+Completed 200 OK in 10341ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 18412)
+
+
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home" for ::1 at 2026-06-03 09:51:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 98.5ms | Allocations: 45887)
+  Rendered layout layouts/application.html.erb (Duration: 102.4ms | Allocations: 60722)
+Completed 200 OK in 106ms (Views: 103.7ms | ActiveRecord: 0.0ms | Allocations: 64675)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 09:52:01 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1653)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2575)
+Completed 200 OK in 11178ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home" for ::1 at 2026-06-03 09:55:11 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 19.6ms | Allocations: 20114)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 35093)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 39045)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 09:55:18 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1686)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2611)
+Completed 200 OK in 14957ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 4865)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:12:07 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 134.3ms | Allocations: 18526)
+  Rendered layout layouts/application.html.erb (Duration: 139.8ms | Allocations: 32702)
+Completed 200 OK in 14086ms (Views: 142.1ms | ActiveRecord: 0.0ms | Allocations: 34480)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:12:57 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2707)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 16879)
+Completed 200 OK in 15643ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 18461)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:35:54 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2703)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 19882)
+Completed 200 OK in 12591ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 21667)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:42:39 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 28.9ms | Allocations: 1486)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 5386)
+Completed 200 OK in 11676ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 6983)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:44:00 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1447)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5335)
+Completed 200 OK in 10686ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 6856)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:45:24 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1448)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 5336)
+Completed 200 OK in 14872ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 7013)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 10:46:27 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1449)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 5337)
+Completed 200 OK in 11970ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 6908)
+
+

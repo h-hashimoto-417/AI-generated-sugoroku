@@ -26,28 +26,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     positions.push({ x: x + 50, y: y + 40 }); // 中心点
 
-    const div = document.createElement("div");
-    switch (square.type) {
-      case "start":
-      case "goal":
-        div.className = "square-start-goal";
-        div.style.left = `${x}px`;
-        div.style.top = `${y}px`;
-        break;
-      case "event":
-        div.className = "square-event";
-        div.style.left = `${x}px`;
-        div.style.top = `${y}px`;
-        break;
-      default:
-        div.className = "square-normal";
-        div.style.left = `${x}px`;
-        div.style.top = `${y+15}px`;
-    }
-    //div.className = square.type === "start" || square.type === "goal" ? "square-start-goal" : "square";
-    // div.innerText = square.text;
+    const container = document.createElement("div");
+    container.className = "square-container";
 
-    map.appendChild(div);
+    container.style.left = `${x}px`;
+    container.style.top = `${y}px`;
+
+    let squareClass;
+
+    switch (square.type) {
+    case "start":
+    case "goal":
+        squareClass = "square-start-goal";
+        break;
+    case "event":
+        squareClass = "square-event";
+        break;
+    default:
+        squareClass = "square-normal";
+    }
+
+    // div.title = square.text;
+
+    container.innerHTML = `
+    <div class="${squareClass}">
+        <span class="square-label">${index + 1}</span>
+    </div>
+
+    <div class="tooltip">
+        ${square.text}
+    </div>
+    `;
+
+    map.appendChild(container);
+
+    
   });
 
   // --- 線描画関数 ---

@@ -29,7 +29,7 @@ def build_prompt(user_input)
 
         effectには "none", "move", "skip", "roll_again", "finish" のいずれかを使ってください。
         valueは効果に応じた数値にしてください。
-        "event"タイプのマスの間には、"normal"タイプのマスを最低1つ入れてください。
+        "event"タイプのマスの間には、"normal"タイプのマスを最低1つ、最大4つまで入れてください。
         JSON以外の説明文は書かないでください。
     TEXT
 

@@ -91,6 +91,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 .square-start-goal {
   position: absolute;
@@ -108,6 +109,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
   /* background-image: url("/assets/start_square.PNG");
   background-size: cover;
   background-position: center; */
@@ -116,6 +118,7 @@
   position: absolute;
   width: 60px;
   height: 30px;
+  top: 15px;
   transform: rotate(-10deg);
   background-color: #e5e0ca;
   border: 2px solid #687786;
@@ -128,4 +131,60 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
+}
+
+/* 吹き出し */
+.tooltip {
+  position: absolute;
+
+  bottom: 110%;
+  left: 40px;
+  transform: translateX(-50%);
+
+  min-width: 250px;
+  max-width: 450px;
+
+  padding: 8px 12px;
+
+  background: #36271e;
+  color: white;
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.2s;
+
+  z-index: 100;
+}
+
+/* 吹き出しの三角 */
+.tooltip::after {
+  content: "";
+
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-width: 8px;
+  border-style: solid;
+
+  border-color: #1f203d transparent transparent transparent;
+}
+
+.square-container {
+  position: absolute;
+}
+/* ホバー時に表示 */
+.square-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
