@@ -1,6 +1,7 @@
 require "json"
 require "net/http"
 require "uri"
+require "dotenv/load"
 
 def build_prompt(user_input)
     prompt = <<~TEXT
@@ -34,8 +35,15 @@ end
 def call_ai_api(prompt)
     api_key = ENV["GEMINI_API_KEY"]
 
-    uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=#{api_key}")
+    if api_key.nil? || api_key.empty?
+        puts "GEMINI_API_KEYが設定されていません"
+        exit
+    end
 
+    puts "API key loaded: #{api_key[0, 6]}..."
+
+    uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=#{api_key}")
+    
     request = Net::HTTP::Post.new(uri)
     request["Content-Type"] = "application/json"
 
@@ -83,16 +91,6 @@ def call_ai_api(prompt)
     text = text.gsub(/```json|```/, "").strip
 
     JSON.parse(text)
-    unless result["title"] && result["squares"]
-        puts "JSON format error"
-        exit
-    end
-
-    result["squares"].each do |square|
-        unless square["type"] && square["text"] && sqaure["effect"]
-            puts "Invalid square data"
-            exit
-        end
 end
 
 puts "作りたいスゴロクのテーマを入力してください : "

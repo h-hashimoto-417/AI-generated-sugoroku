@@ -1,7 +1,11 @@
 class PlayController < ApplicationController
-    def top
+  def top
+    if session[:map_id]
+      @map = Map.find_by(id: session[:map_id])
+      @squares = @map&.squares&.order(:position)
     end
-    def input_member
-    end
+  end
 
+  def input_member
+  end
 end
