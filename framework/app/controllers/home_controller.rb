@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   
-  def generate_original
+  def generate
     # ここでAIを呼び出して、すごろくの盤面とイベントを生成する処理を実装する
     # 例: ai_service = AIService.new; board, events = ai_service.generate_sugoroku
     # 生成した盤面とイベントをビューに渡す
@@ -33,7 +33,7 @@ class HomeController < ApplicationController
     head :ok
   end
 
-  def generate
+  def generate_map
     prompt = params[:prompt]
 
     result = AiService.generate(prompt)

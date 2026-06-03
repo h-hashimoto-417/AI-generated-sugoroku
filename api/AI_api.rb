@@ -100,26 +100,8 @@ def call_ai_api(prompt)
     text = data["candidates"][0]["content"]["parts"][0]["text"]
 
     text = text.gsub(/```json|```/, "").strip
-<<<<<<< HEAD
-    
-    puts "resultに代入"
-    result = JSON.parse(text)
-    unless result["title"] && result["squares"]
-        puts "JSON format error"
-        exit
-    end
-
-    result["squares"].each do |square|
-        unless square["type"] && square["text"] && square["effect"]
-            puts "Invalid square data"
-            exit
-        end
-    end
-    result
-=======
 
     JSON.parse(text)
->>>>>>> main
 end
 
 if __FILE__ == $PROGRAM_NAME
