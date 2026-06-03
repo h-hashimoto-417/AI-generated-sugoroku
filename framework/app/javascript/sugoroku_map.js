@@ -24,14 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const x = col * size;
     const y = row * size;
 
-    positions.push({ x: x + 40, y: y + 40 }); // 中心点
+    positions.push({ x: x + 50, y: y + 40 }); // 中心点
 
     const div = document.createElement("div");
-    div.className = "square";
+    switch (square.type) {
+      case "start":
+      case "goal":
+        div.className = "square-start-goal";
+        div.style.left = `${x}px`;
+        div.style.top = `${y}px`;
+        break;
+      case "event":
+        div.className = "square-event";
+        div.style.left = `${x}px`;
+        div.style.top = `${y}px`;
+        break;
+      default:
+        div.className = "square-normal";
+        div.style.left = `${x}px`;
+        div.style.top = `${y+15}px`;
+    }
+    //div.className = square.type === "start" || square.type === "goal" ? "square-start-goal" : "square";
     // div.innerText = square.text;
-
-    div.style.left = `${x}px`;
-    div.style.top = `${y}px`;
 
     map.appendChild(div);
   });
