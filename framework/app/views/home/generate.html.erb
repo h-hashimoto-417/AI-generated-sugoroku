@@ -10,7 +10,23 @@
         <span class="mini-fg-text">スゴロク</span>
       </div>
     </div>
-    <button class="login-button">ログイン</button>
+    <div class="content-right">
+        <% if current_user %>
+            <span><%= current_user.uname %> さん</span>
+
+            <%= button_to "ログアウト",
+                "/logout",
+                method: :delete,
+                class: "login-button" %>
+        <% else %>
+            <button
+                class="login-button"
+                onclick="location.href='/login'"
+            >
+                ログイン
+            </button>
+        <% end %>
+    </div>
 </div>
 
 <!-- 生成されたすごろくの表示 -->

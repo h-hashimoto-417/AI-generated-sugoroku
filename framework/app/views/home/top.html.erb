@@ -1,5 +1,20 @@
 <div class="content-right">
-    <button class="login-button">ログイン</button>
+    <% if current_user %>
+        <span>
+            <%= current_user.uname %> さん
+        </span>
+        <%= button_to "ログアウト",
+            "/logout",
+            method: :delete,
+            class: "login-button" %>
+    <% else %>
+        <button
+            class="login-button"
+            onclick="location.href='/login'"
+        >
+            ログイン
+        </button>
+    <% end %>
 </div>
 <h1 class="home-header">
     <div class="border-decor">
