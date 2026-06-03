@@ -9,11 +9,9 @@ class HomeController < ApplicationController
   end
 
   
-  def generate
+  def generate_original
     # ここでAIを呼び出して、すごろくの盤面とイベントを生成する処理を実装する
-    # 例: ai_service = AIService.new; board, events = ai_service.generate_sugoroku
     # 生成した盤面とイベントをビューに渡す
-    # render :top, locals: { board: board, events: events }
     user_input = params[:prompt]
     puts "promptに代入"
     prompt = build_prompt(user_input)
@@ -33,7 +31,7 @@ class HomeController < ApplicationController
     head :ok
   end
 
-  def generate_map
+  def generate
     prompt = params[:prompt]
 
     result = AiService.generate(prompt)
@@ -58,7 +56,9 @@ class HomeController < ApplicationController
     Rails.logger.info("AI生成成功")
     Rails.logger.info(result.inspect)
 
-    @sugoroku = "AI生成成功: #{map.map_name}"
+    @sugoroku = result
+
+    @log = "AI生成成功: #{map.map_name}"
 
     render :generate
 
@@ -66,7 +66,7 @@ class HomeController < ApplicationController
     Rails.logger.error("AI生成エラー")
     Rails.logger.error(e.message)
 
-    @sugoroku = "エラー: #{e.message}"
+    @log = "エラー: #{e.message}"
 
     render :generate
   end

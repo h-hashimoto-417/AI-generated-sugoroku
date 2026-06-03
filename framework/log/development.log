@@ -6054,3 +6054,318 @@ Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 2661)
 >>>>>>> main
 
 
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home" for ::1 at 2026-06-03 15:15:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 142.2ms | Allocations: 42663)
+  Rendered layout layouts/application.html.erb (Duration: 146.8ms | Allocations: 57499)
+Completed 200 OK in 151ms (Views: 148.1ms | ActiveRecord: 0.0ms | Allocations: 61452)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 15:15:44 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1657)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2579)
+Completed 200 OK in 11543ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 4569)
+
+
+Started GET "/home" for ::1 at 2026-06-03 15:16:07 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.4ms | Allocations: 685)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1622)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1837)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 15:32:56 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1445)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2367)
+Completed 200 OK in 9891ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 4010)
+
+
+Started GET "/play" for ::1 at 2026-06-03 15:33:41 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3600)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3673)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4224)
+
+
+  
+ActionView::Template::Error (undefined method '[]' for nil):
+    44: <!-- 生成されたすごろくの表示 -->
+    45: <div class="content-center">
+    46:     <h2 class="show-result">生成完了！</h2>
+    47:     <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+    48:     <div id="board">
+    49:       <!-- 線用レイヤー -->
+    50:       <svg id="lines"></svg>
+  
+app/views/play/top.html.erb:47:in '_app_views_play_top_html_erb___1944534203204231473_9304'
+Started GET "/" for ::1 at 2026-06-03 15:59:08 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 236)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 975)
+
+
+Started GET "/home" for ::1 at 2026-06-03 15:59:08 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 4.0ms | Allocations: 930)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 15616)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 16403)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 15:59:14 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "犬"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:39:in 'HomeController#generate'
+  [1m[36mMap Create (1.4ms)[0m  [1m[32mINSERT INTO "maps" ("map_name", "num_of_squares", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["map_name", "わんわんお散歩冒険スゴロク"], ["num_of_squares", 14], ["created_at", "2026-06-03 06:59:24.872622"], ["updated_at", "2026-06-03 06:59:24.872622"]]
+  ↳ app/controllers/home_controller.rb:39:in 'HomeController#generate'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:39:in 'HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.6ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 1], ["square_type", "start"], ["square_text", "お散歩スタート！元気に出発だ！"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 06:59:24.911050"], ["updated_at", "2026-06-03 06:59:24.911050"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 2], ["square_type", "event"], ["square_text", "良い匂いを発見！クンクンしながら2マス進む！"], ["effect", "move"], ["value", 2], ["created_at", "2026-06-03 06:59:24.912763"], ["updated_at", "2026-06-03 06:59:24.912763"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 3], ["square_type", "event"], ["square_text", "公園で友達とバッタリ！喜びすぎて1回お休み。"], ["effect", "skip"], ["value", 1], ["created_at", "2026-06-03 06:59:24.913784"], ["updated_at", "2026-06-03 06:59:24.913784"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 4], ["square_type", "event"], ["square_text", "ご褒美のおやつをもらった！美味しく食べてもう一度サイコロを振る！"], ["effect", "roll_again"], ["value", 0], ["created_at", "2026-06-03 06:59:24.915139"], ["updated_at", "2026-06-03 06:59:24.915139"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.2ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 5], ["square_type", "event"], ["square_text", "知らない猫に遭遇！ちょっと警戒して立ち止まる…"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 06:59:24.915899"], ["updated_at", "2026-06-03 06:59:24.915899"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.2ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 6], ["square_type", "event"], ["square_text", "ボールを見つけた！嬉しくて3マス進む！"], ["effect", "move"], ["value", 3], ["created_at", "2026-06-03 06:59:24.916681"], ["updated_at", "2026-06-03 06:59:24.916681"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 7], ["square_type", "event"], ["square_text", "水たまりにハマって泥だらけ…1マス戻る。"], ["effect", "move"], ["value", -1], ["created_at", "2026-06-03 06:59:24.917679"], ["updated_at", "2026-06-03 06:59:24.917679"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 8], ["square_type", "event"], ["square_text", "飼い主さんが撫でてくれた！幸せな気分で前へ進む。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 06:59:24.918550"], ["updated_at", "2026-06-03 06:59:24.918550"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 9], ["square_type", "event"], ["square_text", "遠くで呼ぶ声が！ダッシュで2マス進む！"], ["effect", "move"], ["value", 2], ["created_at", "2026-06-03 06:59:24.919473"], ["updated_at", "2026-06-03 06:59:24.919473"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.7ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 10], ["square_type", "event"], ["square_text", "途中で休憩。日向ぼっこが気持ちいい。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 06:59:24.920302"], ["updated_at", "2026-06-03 06:59:24.920302"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 11], ["square_type", "event"], ["square_text", "お気に入りの枝を見つけた！くわえてもう一度サイコロを振ろう！"], ["effect", "roll_again"], ["value", 0], ["created_at", "2026-06-03 06:59:24.921640"], ["updated_at", "2026-06-03 06:59:24.921640"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 12], ["square_type", "event"], ["square_text", "いたずらがバレてしまった…仕方ない、1回お休み。"], ["effect", "skip"], ["value", 1], ["created_at", "2026-06-03 06:59:24.922490"], ["updated_at", "2026-06-03 06:59:24.922490"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 13], ["square_type", "event"], ["square_text", "お家が見えてきた！あと少しでゴールだ！"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 06:59:24.923272"], ["updated_at", "2026-06-03 06:59:24.923272"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.2ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 10], ["position", 14], ["square_type", "goal"], ["square_text", "ゴール！お散歩お疲れ様！ゆっくり休もう！"], ["effect", "finish"], ["value", 0], ["created_at", "2026-06-03 06:59:24.924274"], ["updated_at", "2026-06-03 06:59:24.924274"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+AI生成成功
+{"title" => "わんわんお散歩冒険スゴロク", "squares" => [{"type" => "start", "text" => "お散歩スタート！元気に出発だ！", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "良い匂いを発見！クンクンしながら2マス進む！", "effect" => "move", "value" => 2}, {"type" => "event", "text" => "公園で友達とバッタリ！喜びすぎて1回お休み。", "effect" => "skip", "value" => 1}, {"type" => "event", "text" => "ご褒美のおやつをもらった！美味しく食べてもう一度サイコロを振る！", "effect" => "roll_again", "value" => 0}, {"type" => "event", "text" => "知らない猫に遭遇！ちょっと警戒して立ち止まる…", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "ボールを見つけた！嬉しくて3マス進む！", "effect" => "move", "value" => 3}, {"type" => "event", "text" => "水たまりにハマって泥だらけ…1マス戻る。", "effect" => "move", "value" => -1}, {"type" => "event", "text" => "飼い主さんが撫でてくれた！幸せな気分で前へ進む。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "遠くで呼ぶ声が！ダッシュで2マス進む！", "effect" => "move", "value" => 2}, {"type" => "event", "text" => "途中で休憩。日向ぼっこが気持ちいい。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "お気に入りの枝を見つけた！くわえてもう一度サイコロを振ろう！", "effect" => "roll_again", "value" => 0}, {"type" => "event", "text" => "いたずらがバレてしまった…仕方ない、1回お休み。", "effect" => "skip", "value" => 1}, {"type" => "event", "text" => "お家が見えてきた！あと少しでゴールだ！", "effect" => "none", "value" => 0}, {"type" => "goal", "text" => "ゴール！お散歩お疲れ様！ゆっくり休もう！", "effect" => "finish", "value" => 0}]}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1667)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2598)
+Completed 200 OK in 10312ms (Views: 2.6ms | ActiveRecord: 9.8ms | Allocations: 58121)
+
+
+Started GET "/home" for ::1 at 2026-06-03 16:03:25 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.0ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 15588)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 16432)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-03 16:03:31 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => "猫"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:39:in 'HomeController#generate'
+  [1m[36mMap Create (1.3ms)[0m  [1m[32mINSERT INTO "maps" ("map_name", "num_of_squares", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["map_name", "ニャンだフルライフすごろく"], ["num_of_squares", 18], ["created_at", "2026-06-03 07:03:40.724805"], ["updated_at", "2026-06-03 07:03:40.724805"]]
+  ↳ app/controllers/home_controller.rb:39:in 'HomeController#generate'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:39:in 'HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.8ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 1], ["square_type", "start"], ["square_text", "子猫の冒険、はじまるニャン！"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.735573"], ["updated_at", "2026-06-03 07:03:40.735573"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.7ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 2], ["square_type", "normal"], ["square_text", "ゴロゴロお昼寝。ZZZ..."], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.737873"], ["updated_at", "2026-06-03 07:03:40.737873"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (1.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 3], ["square_type", "event"], ["square_text", "新しいおもちゃを発見！テンションMAXで2マス進む！"], ["effect", "move"], ["value", 2], ["created_at", "2026-06-03 07:03:40.740147"], ["updated_at", "2026-06-03 07:03:40.740147"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.6ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 4], ["square_type", "normal"], ["square_text", "窓際でひなたぼっこ。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.744438"], ["updated_at", "2026-06-03 07:03:40.744438"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.5ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 5], ["square_type", "event"], ["square_text", "毛玉を吐いちゃった...1ターンお休み。"], ["effect", "skip"], ["value", 1], ["created_at", "2026-06-03 07:03:40.746305"], ["updated_at", "2026-06-03 07:03:40.746305"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.5ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 6], ["square_type", "normal"], ["square_text", "伸びーっ。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.747935"], ["updated_at", "2026-06-03 07:03:40.747935"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.5ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 7], ["square_type", "event"], ["square_text", "ダンボールハウスに潜り込んだ！もう一度サイコロを振ろう！"], ["effect", "roll_again"], ["value", 0], ["created_at", "2026-06-03 07:03:40.749501"], ["updated_at", "2026-06-03 07:03:40.749501"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (5.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 8], ["square_type", "normal"], ["square_text", "飼い主さんの膝の上でまったり。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.751119"], ["updated_at", "2026-06-03 07:03:40.751119"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 9], ["square_type", "event"], ["square_text", "チュールゲット！美味しすぎて3マス進む！"], ["effect", "move"], ["value", 3], ["created_at", "2026-06-03 07:03:40.757530"], ["updated_at", "2026-06-03 07:03:40.757530"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 10], ["square_type", "normal"], ["square_text", "壁で爪とぎ。ガリガリ。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.758785"], ["updated_at", "2026-06-03 07:03:40.758785"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 11], ["square_type", "event"], ["square_text", "ネズミのおもちゃを追いかけて、1マス戻る！"], ["effect", "move"], ["value", -1], ["created_at", "2026-06-03 07:03:40.759958"], ["updated_at", "2026-06-03 07:03:40.759958"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 12], ["square_type", "normal"], ["square_text", "水飲み場でごくごく。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.762167"], ["updated_at", "2026-06-03 07:03:40.762167"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 13], ["square_type", "normal"], ["square_text", "鳥の鳴き声に耳を澄ます。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.763317"], ["updated_at", "2026-06-03 07:03:40.763317"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.4ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 14], ["square_type", "event"], ["square_text", "獣医さんで注射。怖くて1ターンお休み。"], ["effect", "skip"], ["value", 1], ["created_at", "2026-06-03 07:03:40.764480"], ["updated_at", "2026-06-03 07:03:40.764480"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 15], ["square_type", "normal"], ["square_text", "夜のパトロール。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.766016"], ["updated_at", "2026-06-03 07:03:40.766016"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 16], ["square_type", "event"], ["square_text", "秘密の抜け道を発見！もう一度サイコロを振ろう！"], ["effect", "roll_again"], ["value", 0], ["created_at", "2026-06-03 07:03:40.767025"], ["updated_at", "2026-06-03 07:03:40.767025"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.3ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 17], ["square_type", "normal"], ["square_text", "香箱座りで瞑想中。"], ["effect", "none"], ["value", 0], ["created_at", "2026-06-03 07:03:40.768041"], ["updated_at", "2026-06-03 07:03:40.768041"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mSquare Create (0.7ms)[0m  [1m[32mINSERT INTO "squares" ("map_id", "position", "square_type", "square_text", "effect", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["map_id", 11], ["position", 18], ["square_type", "goal"], ["square_text", "最高のニャン生！ゴールニャン！"], ["effect", "finish"], ["value", 0], ["created_at", "2026-06-03 07:03:40.769067"], ["updated_at", "2026-06-03 07:03:40.769067"]]
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:47:in 'block in HomeController#generate'
+AI生成成功
+{"title" => "ニャンだフルライフすごろく", "squares" => [{"type" => "start", "text" => "子猫の冒険、はじまるニャン！", "effect" => "none", "value" => 0}, {"type" => "normal", "text" => "ゴロゴロお昼寝。ZZZ...", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "新しいおもちゃを発見！テンションMAXで2マス進む！", "effect" => "move", "value" => 2}, {"type" => "normal", "text" => "窓際でひなたぼっこ。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "毛玉を吐いちゃった...1ターンお休み。", "effect" => "skip", "value" => 1}, {"type" => "normal", "text" => "伸びーっ。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "ダンボールハウスに潜り込んだ！もう一度サイコロを振ろう！", "effect" => "roll_again", "value" => 0}, {"type" => "normal", "text" => "飼い主さんの膝の上でまったり。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "チュールゲット！美味しすぎて3マス進む！", "effect" => "move", "value" => 3}, {"type" => "normal", "text" => "壁で爪とぎ。ガリガリ。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "ネズミのおもちゃを追いかけて、1マス戻る！", "effect" => "move", "value" => -1}, {"type" => "normal", "text" => "水飲み場でごくごく。", "effect" => "none", "value" => 0}, {"type" => "normal", "text" => "鳥の鳴き声に耳を澄ます。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "獣医さんで注射。怖くて1ターンお休み。", "effect" => "skip", "value" => 1}, {"type" => "normal", "text" => "夜のパトロール。", "effect" => "none", "value" => 0}, {"type" => "event", "text" => "秘密の抜け道を発見！もう一度サイコロを振ろう！", "effect" => "roll_again", "value" => 0}, {"type" => "normal", "text" => "香箱座りで瞑想中。", "effect" => "none", "value" => 0}, {"type" => "goal", "text" => "最高のニャン生！ゴールニャン！", "effect" => "finish", "value" => 0}]}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1671)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2602)
+Completed 200 OK in 9105ms (Views: 3.6ms | ActiveRecord: 20.9ms | Allocations: 46964)
+
+
