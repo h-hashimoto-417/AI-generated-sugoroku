@@ -1,7 +1,20 @@
 <div class="content-right">
     <button class="login-button">ログイン</button>
 </div>
-<h1 class="home-header">AI 生成スゴロク</h1>
+<h1 class="home-header">
+    <div class="border-decor">
+        <span class="title-ai">
+        <%= image_tag "heart2.PNG", class: "heart-bg" %>
+        AI
+        </span>
+        <span class="title-suru">する</span>
+        <div class="title-wrap">
+            <span class="bg-text">スゴロク</span>
+            <span class="fg-text">スゴロク</span>
+        </div>
+    </div>
+</h1>
+
 <%= form_with url: "/home/generate", method: :post, data: { turbo: false } do %>
     <div class="content-center">
         <textarea 
@@ -13,7 +26,15 @@
     <div class="content-center">
         <button 
         type="submit"
+        data-loading="ai"
         class="generate-button"
         >生成</button>
     </div>
 <% end %>
+
+<!-- ローディングUI（レイアウトに1回だけ置く） -->
+<div id="loading-overlay" class="loading-overlay hidden">
+  <div class="loading-box">
+    生成中…
+  </div>
+</div>

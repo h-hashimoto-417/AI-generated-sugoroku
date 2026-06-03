@@ -34,3 +34,157 @@
   text-align: center;
 }
 
+.sugoroku-display {
+  width: 80%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.show-map-title {
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+}
+
+#board {
+  position: relative;
+  width: 80%;
+  height: 600px;
+  margin: 60px auto;
+}
+
+/* SVG（線のレイヤー） */
+#lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* マスのレイヤー */
+#map {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.square-event {
+  position: absolute;
+  transform: skewX(-30deg);
+  width: 70px;
+  height: 70px;
+  background-color: #e5e0ca;
+  border: 2px solid #687786;
+  border-radius: 10px;
+  outline: 2px dotted #687786;
+  outline-offset: -7px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.square-start-goal {
+  position: absolute;
+  transform: skewX(-30deg);
+  width: 70px;
+  height: 70px;
+  background-color: #8B1E3F;
+  border: 2px solid #F5F0E6;
+  border-radius: 10px;
+  outline: 2px dotted #F5F0E6;
+  outline-offset: -7px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  /* background-image: url("/assets/start_square.PNG");
+  background-size: cover;
+  background-position: center; */
+}
+.square-normal {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 15px;
+  transform: rotate(-10deg);
+  background-color: #e5e0ca;
+  border: 2px solid #687786;
+  border-radius: 50%;
+  outline: 2px dotted #687786;
+  outline-offset: -7px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 吹き出し */
+.tooltip {
+  position: absolute;
+
+  bottom: 110%;
+  left: 40px;
+  transform: translateX(-50%);
+
+  min-width: 250px;
+  max-width: 450px;
+
+  padding: 8px 12px;
+
+  background: #36271e;
+  color: white;
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.2s;
+
+  z-index: 100;
+}
+
+/* 吹き出しの三角 */
+.tooltip::after {
+  content: "";
+
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-width: 8px;
+  border-style: solid;
+
+  border-color: #1f203d transparent transparent transparent;
+}
+
+.square-container {
+  position: absolute;
+}
+/* ホバー時に表示 */
+.square-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

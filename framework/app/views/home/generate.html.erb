@@ -1,14 +1,44 @@
 <div class="header">
-    <h1 class="site-title">AI生成スゴロク</h1>
+    <div>
+      <span class="mini-title-ai">
+        <%= image_tag "heart2.PNG", class: "mini-heart-bg" %>
+        AI
+      </span>
+      <span class="mini-title-suru">する</span>
+      <div class="mini-title-wrap">
+        <span class="mini-bg-text">スゴロク</span>
+        <span class="mini-fg-text">スゴロク</span>
+      </div>
+    </div>
     <button class="login-button">ログイン</button>
 </div>
+
+<!-- 生成されたすごろくの表示 -->
 <div class="content-center">
     <h2 class="show-result">生成完了！</h2>
-    <div class="sugoroku-display">
-        <%= @sugoroku %>
+    <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+    <div id="board">
+      <!-- 線用レイヤー -->
+      <svg id="lines"></svg>
+
+      <!-- マス用レイヤー -->
+      <div id="map"></div>
     </div>
+
+    <script>
+      // RailsのデータをJSに渡す（重要）
+      const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+    </script>
+
+    <!-- 外部JS読み込み -->
+    <%= javascript_include_tag "sugoroku_map" %>
 </div>
+
+<!-- ボタンの表示 -->
 <div class="content-sidebyside">
-    <button class="action-button" onclick="location.href='/play'">遊ぶ</button>
-    <button class="action-button" onclick="location.href='/home'">再生成</button>
+    <button class="action-button" onclick="location.href='/play'">保存する</button>
+    <button class="action-button" onclick="location.href='/home'">やり直す</button>
+</div>
+<div class="content-center">
+    <button class="play-button" onclick="location.href='/play'">遊ぶ</button>
 </div>
