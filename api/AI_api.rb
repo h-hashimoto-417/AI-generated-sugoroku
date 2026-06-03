@@ -1,6 +1,7 @@
 require "json"
 require "net/http"
 require "uri"
+require "dotenv/load"
 
 # p ENV["GEMINI_API_KEY"]
 
@@ -40,8 +41,15 @@ end
 def call_ai_api(prompt)
     api_key = ENV["GEMINI_API_KEY"]
 
-    uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=#{api_key}")
+    if api_key.nil? || api_key.empty?
+        puts "GEMINI_API_KEYが設定されていません"
+        exit
+    end
 
+    puts "API key loaded: #{api_key[0, 6]}..."
+
+    uri = URI("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=#{api_key}")
+    
     request = Net::HTTP::Post.new(uri)
     request["Content-Type"] = "application/json"
     puts "APIにリクエストを送信します..."
@@ -92,6 +100,7 @@ def call_ai_api(prompt)
     text = data["candidates"][0]["content"]["parts"][0]["text"]
 
     text = text.gsub(/```json|```/, "").strip
+<<<<<<< HEAD
     
     puts "resultに代入"
     result = JSON.parse(text)
@@ -107,6 +116,10 @@ def call_ai_api(prompt)
         end
     end
     result
+=======
+
+    JSON.parse(text)
+>>>>>>> main
 end
 
 if __FILE__ == $PROGRAM_NAME

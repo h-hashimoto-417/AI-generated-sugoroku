@@ -1,10 +1,11 @@
 class PlayController < ApplicationController
-    def top
+  def top
+    if session[:map_id]
+      @map = Map.find_by(id: session[:map_id])
+      @squares = @map&.squares&.order(:position)
     end
-    def input_member
-        @player_count = params[:player_count]
-        @player_names = params[:player_names]
-        # redirect_to play_path
-    end
+  end
 
+  def input_member
+  end
 end
