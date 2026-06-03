@@ -1,68 +1,82 @@
 <div class="header">
-    <h1 class="site-title">AI生成スゴロク</h1>
-    <div class="content-right">
-        <% if current_user %>
-            <span><%= current_user.uname %> さん</span>
-            <%= button_to "ログアウト",
-                "/logout",
-                method: :delete,
-                class: "login-button" %>
-        <% else %>
-            <button
-                class="login-button"
-                onclick="location.href='/login'"
-            >
-                ログイン
-            </button>
-        <% end %>
+    <div>
+      <span class="mini-title-ai">
+        <%= image_tag "heart2.PNG", class: "mini-heart-bg" %>
+        AI
+      </span>
+      <span class="mini-title-suru">する</span>
+      <div class="mini-title-wrap">
+        <span class="mini-bg-text">スゴロク</span>
+        <span class="mini-fg-text">スゴロク</span>
+      </div>
     </div>
+    <button class="login-button">ログイン</button>
 </div>
 
 <div id="player-modal" class="modal">
-
   <div class="modal-content">
     <h2>プレイヤー登録</h2>
-    <div class="content-sidebyside">
+    
+    <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>
+      <div class="content-sidebyside">
+        <h3>プレイヤー人数</h3>
+        <%= f.number_field :player_count, min: 1, max: 4, value: 2, class: "player-count" %>
+      </div>
+        
+      <h3>プレイヤーの名前</h3>
+      <div id="player-names" class="content-sidebyside">
+        <%= f.text_field :player_names, placeholder: "name", class: "player-names" %>
+      </div>
 
-    <h3>プレイヤー人数</h3>
-    <input
-        type="number"
-        min="1"
-        max="4"
-        value="2"
-        class="player-count"
-    >
+      <%= f.submit "決定", class: "action-button", onclick: "closeModal()" %>
+      <script>
+          function closeModal() {
 
-</div>
-    <button onclick="closeModal()">
-      決定
-    </button>
-    <script>
-        function closeModal() {
-
-        document
-        .getElementById("player-modal")
-        .style.display = "none";
-        }
-    </script>
-</div>
-
-</div>
-
-<% if @map.present? %>
-  <div class="sugoroku-display">
-    <h2><%= @map.map_name %></h2>
-
-    <% @squares.each do |square| %>
-      <p>
-        <%= square.position %>マス目:
-        <%= square.square_text %>
-        （<%= square.effect %>, <%= square.value %>）
-      </p>
+          document
+          .getElementById("player-modal")
+          .style.display = "none";
+          }
+      </script>
     <% end %>
   </div>
-<% else %>
-  <div class="sugoroku-display">
-    <p>生成されたスゴロクがありません。</p>
-  </div>
-<% end %>
+</div>
+
+<!-- 生成されたすごろくの表示 -->
+<div class="content-center">
+    <h2 class="show-result">生成完了！</h2>
+    <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+    <div id="board">
+      <!-- 線用レイヤー -->
+      <svg id="lines"></svg>
+
+      <!-- マス用レイヤー -->
+      <div id="map"></div>
+    </div>
+
+    <script>
+      // RailsのデータをJSに渡す（重要）
+      const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+    </script>
+
+    <!-- 外部JS読み込み -->
+    <%= javascript_include_tag "sugoroku_map" %>
+</div>
+</div>
+
+# <% if @map.present? %>
+#   <div class="sugoroku-display">
+#     <h2><%= @map.map_name %></h2>
+
+#     <% @squares.each do |square| %>
+#       <p>
+#         <%= square.position %>マス目:
+#         <%= square.square_text %>
+#         （<%= square.effect %>, <%= square.value %>）
+#       </p>
+#     <% end %>
+#   </div>
+# <% else %>
+#   <div class="sugoroku-display">
+#     <p>生成されたスゴロクがありません。</p>
+#   </div>
+# <% end %>

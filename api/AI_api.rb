@@ -3,7 +3,10 @@ require "net/http"
 require "uri"
 require "dotenv/load"
 
+# p ENV["GEMINI_API_KEY"]
+
 def build_prompt(user_input)
+    puts "ユーザーの入力をもとにプロンプトを生成します..."
     prompt = <<~TEXT
         あなたはスゴロクゲームの盤面を作成するAIです
 
@@ -19,6 +22,7 @@ def build_prompt(user_input)
             "squares" : [
                 {"type": "start", "text": "スタート", "effect": "none", "value": 0 },
                 {"type": "event", "text": "イベント内容", "effect": "move", "value": 2 },
+                {"type": "normal", "text": "何も起こらないマス", "effect": "none", "value": 0 },
                 {"type": "event", "text": "イベント内容", "effect": "skip", "value": 1 },
                 {"type": "goal", "text": "ゴール", "effect": "finish", "value": 0 }
             ]
@@ -26,9 +30,11 @@ def build_prompt(user_input)
 
         effectには "none", "move", "skip", "roll_again", "finish" のいずれかを使ってください。
         valueは効果に応じた数値にしてください。
+        "event"タイプのマスの間には、"normal"タイプのマスを最低1つ、最大4つまで入れてください。
         JSON以外の説明文は書かないでください。
     TEXT
 
+    puts "ユーザーの入力をもとにプロンプトを生成しました:"
     prompt
 end
 
@@ -46,7 +52,7 @@ def call_ai_api(prompt)
     
     request = Net::HTTP::Post.new(uri)
     request["Content-Type"] = "application/json"
-
+    puts "APIにリクエストを送信します..."
     request.body = {
         :contents => [
             {
@@ -66,10 +72,13 @@ def call_ai_api(prompt)
     if data["error"]
         puts "API Error:"
         puts data["error"]["message"]
+        puts "API Response:"
+        puts response.body
         exit
     end
 
     usage = data["usageMetadata"]
+    puts "API Response:"
 
     if usage
         puts "===== Token Usage ====="
@@ -84,6 +93,8 @@ def call_ai_api(prompt)
         puts "======================="
     else
         puts "Token usage information is not available."
+        puts "API Response:"
+        puts response.body
     end
 
     text = data["candidates"][0]["content"]["parts"][0]["text"]
@@ -93,18 +104,20 @@ def call_ai_api(prompt)
     JSON.parse(text)
 end
 
-puts "作りたいスゴロクのテーマを入力してください : "
-user_input = gets.chomp
+if __FILE__ == $PROGRAM_NAME
+    puts "作りたいスゴロクのテーマを入力してください : "
+    user_input = gets.chomp
 
-prompt = build_prompt(user_input)
+    prompt = build_prompt(user_input)
 
-result = call_ai_api(prompt)
+    result = call_ai_api(prompt)
 
-puts JSON.pretty_generate(result)
+    puts JSON.pretty_generate(result)
 
-File.write(
-    "api/generated_map.json",
-    JSON.pretty_generate(result)
-)
+    File.write(
+        "api/generated_map.json",
+        JSON.pretty_generate(result)
+    )
 
-puts "generated_map.jsonに保存しました"
+    puts "generated_map.jsonに保存しました"
+end
