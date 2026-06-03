@@ -1,0 +1,22 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<hr>
+
+<h2>新規登録 (テスト用)</h2>
+
+<%= form_with model: @user, url: "/signup", method: :post, data: { turbo: false } do |f| %>
+
+  <p>ユーザー名</p>
+  <%= f.text_field :uname %>
+
+  <p>パスワード</p>
+  <%= f.password_field :password %>
+
+  <p>パスワード確認</p>
+  <%= f.password_field :password_confirmation %>
+
+  <br>
+  <%= f.submit "登録" %>
+
+<% end %>

@@ -1,0 +1,25 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+<hr>
+
+<h2>ログイン (テスト用)</h2>
+
+<% if @error_message.present? %>
+  <p style="color:red;">
+    <%= @error_message %>
+  </p>
+<% end %>
+
+<%= form_with url: "/login", method: :post, data: { turbo: false } do %>
+
+  <p>ユーザー名</p>
+  <input type="text" name="uname">
+
+  <p>パスワード</p>
+  <input type="password" name="password">
+
+  <br>
+  <button type="submit">ログイン</button>
+
+<% end %>
