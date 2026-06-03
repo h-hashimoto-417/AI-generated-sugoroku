@@ -1,6 +1,21 @@
 <div class="header">
     <h1 class="site-title">AI生成スゴロク</h1>
-    <button class="login-button">ログイン</button>
+    <div class="content-right">
+        <% if current_user %>
+            <span><%= current_user.uname %> さん</span>
+            <%= button_to "ログアウト",
+                "/logout",
+                method: :delete,
+                class: "login-button" %>
+        <% else %>
+            <button
+                class="login-button"
+                onclick="location.href='/login'"
+            >
+                ログイン
+            </button>
+        <% end %>
+    </div>
 </div>
 <div class="content-center">
     <h2 class="show-result">生成完了！</h2>
