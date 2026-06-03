@@ -14,32 +14,50 @@
 </div>
 
 <div id="player-modal" class="modal">
-
   <div class="modal-content">
     <h2>プレイヤー登録</h2>
-    <div class="content-sidebyside">
+    
+    <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>
+      <div class="content-sidebyside">
+        <h3>プレイヤー人数</h3>
+        <%= f.number_field :player_count, min: 1, max: 4, value: 2, class: "player-count" %>
+      </div>
+        
+      <h3>プレイヤーの名前</h3>
+      <div id="player-names" class="content-sidebyside">
+        <%= f.text_field :player_names, placeholder: "name", class: "player-names" %>
+      </div>
 
-    <h3>プレイヤー人数</h3>
-    <input
-        type="number"
-        min="1"
-        max="4"
-        value="2"
-        class="player-count"
-    >
+      <%= f.submit "決定", class: "action-button", onclick: "closeModal()" %>
+      <script>
+          function closeModal() {
 
+          document
+          .getElementById("player-modal")
+          .style.display = "none";
+          }
+      </script>
+    <% end %>
+  </div>
 </div>
-    <button onclick="closeModal()">
-      決定
-    </button>
+
+<!-- 生成されたすごろくの表示 -->
+<div class="content-center">
+    <h2 class="show-result">生成完了！</h2>
+    <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+    <div id="board">
+      <!-- 線用レイヤー -->
+      <svg id="lines"></svg>
+
+      <!-- マス用レイヤー -->
+      <div id="map"></div>
+    </div>
+
     <script>
-        function closeModal() {
-
-        document
-        .getElementById("player-modal")
-        .style.display = "none";
-        }
+      // RailsのデータをJSに渡す（重要）
+      const sugoroku = <%= @sugoroku.to_json.html_safe %>;
     </script>
-</div>
 
+    <!-- 外部JS読み込み -->
+    <%= javascript_include_tag "sugoroku_map" %>
 </div>
