@@ -1,0 +1,92 @@
+<div class="header">
+    <div>
+      <span class="mini-title-ai">
+        <%= image_tag "heart2.PNG", class: "mini-heart-bg" %>
+        AI
+      </span>
+      <span class="mini-title-suru">する</span>
+      <div class="mini-title-wrap">
+        <span class="mini-bg-text">スゴロク</span>
+        <span class="mini-fg-text">スゴロク</span>
+      </div>
+    </div>
+    <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+    <div>
+        <% if current_user %>
+            <span><%= current_user.uname %> さん</span>
+
+            <%= button_to "ログアウト",
+                "/logout",
+                method: :delete,
+                class: "login-button" %>
+        <% else %>
+            <button
+                class="login-button"
+                onclick="location.href='/login'"
+            >
+                ログイン
+            </button>
+        <% end %>
+    </div>
+</div>
+
+<script>
+    const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+    const player_names = <%= @player_names.to_json.html_safe %>;
+    const player_colors = <%= @player_colors.to_json.html_safe %>;
+    const player_count = <%= @player_count %>;
+</script>
+
+
+<!-- ゲーム画面の表示 -->
+<div class="game-container">
+
+  <!-- すごろくmapの表示 -->
+  <div class="sugoroku-display">   
+    <div id="map-camera" class="map-camera">
+      <div id="board">
+        <!-- 線用レイヤー -->
+        <svg id="lines"></svg>
+
+        <!-- マス用レイヤー -->
+        <div id="map"></div>
+
+        <!-- コマ用レイヤ -->
+        <% @player_count.times do |i| %>
+          <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <!-- 外部JS読み込み -->
+  <%= javascript_include_tag "sugoroku_map" %>
+  <%= javascript_include_tag "play_sugoroku" %>
+
+
+  <!-- サイコロの表示 -->
+  <div class="dice-layer">
+      <button id="dice" class="dice-button">🎲</button>
+  </div>
+
+  <!-- ステータスウィンドウの表示 -->
+  <div id="status-window" class="window-layer status-window">
+    <div class="status-window-text">
+      <h2>現在のターン：</h2>
+      <h3>サイコロを振る人：</h3>
+      <h3><!-- <%= @player %> --> さん</h3>
+    </div>
+  </div>
+
+  <!-- ストーリーウィンドウの表示 -->
+  <div id="story-window" class="window-layer story-window">
+  </div>
+
+  
+
+</div>
+
+
+
+
+

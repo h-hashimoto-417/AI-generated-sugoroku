@@ -91,7 +91,21 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
+}
+
+/* カメラコンテナのスタイル */
+.map-camera {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  /* 変化を滑らかにする（0.5秒かけてズーム・移動する） */
+  /* transition: transform 0.5s ease-in-out; 
+  transition: transform 0.4s ease-out; */
+  
+  /* 💡 超重要：拡大・縮小の「基準点」を常に左上(0,0)にしておく */
+  transform-origin: 0 0; 
 }
 
 .show-map-title {
@@ -249,23 +263,37 @@
   overflow: hidden; /* 画面からはみ出たマップをスクロールさせたい場合は要調整 */
 }
 
+/* コマのスタイル */
+.piece {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  /* background-color: #8B1E3F; */
+  border: 2px solid #1f203d;
+  border-radius: 50%;
+  /* top: 0px;
+  left: 60px; */
+  z-index: 50;
+  transition: left 0.3s, top 0.3s; /* コマ自体の移動も滑らかに */
+  transition: left 0.3s ease-out, top 0.3s ease-out;
+}
+
 /* サイコロの表示層 */
 .dice-layer {
   position: fixed; /* 💡 画面に対して固定 */
   bottom: 60px;    /* 画面右下に配置する例 */
   right: 40px;
-  z-index: 10;     /* マップより手前 */
+  z-index: 300;     /* マップより手前 */
 }
 .dice-button {
   width: 200px;
   height: 200px;
   padding: 20px;
-  font-size: 24px;
+  font-size: 100px;
   /* ボタンを目立たせる装飾 */
   background: #ffcc00;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: none;
 }
 
 /* ウィンドウ共通スタイル */
@@ -275,6 +303,7 @@
   border-radius: 8px;
   padding: 20px;
 }
+
 .status-window {
   width: 300px;
   height: 530px;
@@ -284,12 +313,24 @@
   bottom: 60px;
   left: 40px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  z-index: 30;
-  display: none;
+  z-index: 400;
 }
 .status-window-text {
   width: 300px;
   height: 530px;
   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
   background-color: transparent;
+}
+
+.story-window {
+  width: 500px;
+  height: 100px;
+  background-color: rgba(222, 222, 222, 0.6);
+  border: 3px solid #323747;
+  border-radius: 10px;
+  bottom: 60px;
+  left: 460px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 400;
+  display: none;
 }

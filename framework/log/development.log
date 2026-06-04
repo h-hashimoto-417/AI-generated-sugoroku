@@ -12362,3 +12362,3081 @@ No template found for PlayController#input_member, rendering head :no_content
 Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 551)
 
 
+Started GET "/play" for ::1 at 2026-06-04 17:37:10 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2992)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6993)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 1.8ms | Allocations: 7496)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 17:37:12 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/play" for ::1 at 2026-06-04 17:37:30 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6736)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 7244)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 17:37:32 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 292)
+
+
+Started GET "/play" for ::1 at 2026-06-04 17:40:24 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6742)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 7250)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 17:40:26 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:11:48 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 87.3ms | Allocations: 28966)
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 29040)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 1.7ms | Allocations: 30174)
+
+
+  
+ActionView::Template::Error (undefined method 'times' for nil):
+    114:         <div id="map"></div>
+    115: 
+    116:         <!-- コマ用レイヤ -->
+    117:         <% @player_count.times do |i| %>
+    118:           <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+    119:         <% end %>
+    120:       </div>
+  
+app/views/play/top.html.erb:117:in '_app_views_play_top_html_erb__1870253003384413039_160184'
+Started GET "/" for ::1 at 2026-06-04 19:17:40 +0900
+Started GET "/home" for ::1 at 2026-06-04 19:17:44 +0900
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/home" for ::1 at 2026-06-04 19:18:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 60.7ms | Allocations: 28895)
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 43817)
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 1.0ms | Allocations: 47772)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:18:58 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2253)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3175)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 3855)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:19:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4895)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4968)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 5695)
+
+
+  
+ActionView::Template::Error (undefined method 'times' for nil):
+    114:         <div id="map"></div>
+    115: 
+    116:         <!-- コマ用レイヤ -->
+    117:         <% @player_count.times do |i| %>
+    118:           <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+    119:         <% end %>
+    120:       </div>
+  
+app/views/play/top.html.erb:117:in '_app_views_play_top_html_erb___1301379089126916825_9520'
+[dotenv] Set [36mGEMINI_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/play" for ::1 at 2026-06-04 19:32:08 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  Rendered play/play.html.erb within layouts/application (Duration: 38.2ms | Allocations: 21144)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 21252)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 25170)
+
+
+  
+ActionView::Template::Error (undefined method 'times' for nil):
+    15:         <div id="map"></div>
+    16: 
+    17:         <!-- コマ用レイヤ -->
+    18:         <% @player_count.times do |i| %>
+    19:           <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+    20:         <% end %>
+    21:       </div>
+  
+app/views/play/play.html.erb:18:in '_app_views_play_play_html_erb___1797670571897695644_9232'
+Started GET "/" for ::1 at 2026-06-04 19:32:08 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 235)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 966)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:32:09 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 13.6ms | Allocations: 9616)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 24479)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 1.0ms | Allocations: 24903)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:32:12 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2241)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3163)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3837)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:32:15 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3439)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4362)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4943)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:32:21 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "3", "player_names" => ["", "", ""], "player_colors" => ["#000000", "#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:32:21 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  Rendered play/play.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2228)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2301)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2546)
+
+
+  
+ActionView::Template::Error (undefined method 'times' for nil):
+    15:         <div id="map"></div>
+    16: 
+    17:         <!-- コマ用レイヤ -->
+    18:         <% @player_count.times do |i| %>
+    19:           <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+    20:         <% end %>
+    21:       </div>
+  
+app/views/play/play.html.erb:18:in '_app_views_play_play_html_erb___1797670571897695644_9232'
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:38:43 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4458)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 18973)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 1.2ms | Allocations: 20121)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:38:45 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 226)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 758)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:38:46 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2347)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 2764)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:38:49 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2184)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3106)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3734)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:38:51 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3661)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 4167)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:38:53 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 311)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:38:53 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  Rendered play/play.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2139)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3062)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3676)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:39:33 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4569)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 18933)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 1.1ms | Allocations: 20083)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:39:51 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3666)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4185)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:39:51 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 226)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 759)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:39:52 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2362)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2779)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:39:54 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2175)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3097)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3728)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:39:57 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3140)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4062)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 4637)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:39:59 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:39:59 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2747)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3673)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4225)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:44:45 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4552)
+  Rendered layout layouts/application.html.erb (Duration: 233.0ms | Allocations: 42566)
+Completed 200 OK in 237ms (Views: 233.5ms | ActiveRecord: 1.2ms | Allocations: 43716)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:44:52 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 230)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 766)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:44:53 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2367)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 2785)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:44:55 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2187)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3109)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3747)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:44:58 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3141)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4063)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 4636)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:45:00 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:45:00 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2755)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3678)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4227)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:45:03 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2793)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3725)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4243)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:45:14 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3666)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4189)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:45:38 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3666)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 4183)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:45:38 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:45:39 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2095)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2309)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:46:01 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3678)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 18189)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 1.2ms | Allocations: 19405)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:46:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3173)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4096)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4810)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:46:04 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:46:04 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3013)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3936)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4547)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:47:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 227)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 816)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:47:25 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 20528)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.3ms | Allocations: 21317)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:47:27 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3735)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:47:28 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4075)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4801)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:47:30 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 308)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:47:30 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3058)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3981)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4594)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:47:36 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3666)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4180)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:49:15 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 227)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 817)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:49:15 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2903)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 17421)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 1.0ms | Allocations: 18215)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:49:18 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 3730)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:49:19 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4075)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 4793)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:49:21 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:49:21 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2284)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3216)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 3833)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:50:36 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4570)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 19088)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 1.7ms | Allocations: 20246)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:50:36 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 226)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 759)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:50:37 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2367)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 2784)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:50:39 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2175)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3097)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3732)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:50:41 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3141)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4063)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4635)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:50:42 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:50:42 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3666)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4214)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:55:31 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 18.5ms | Allocations: 4042)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 18221)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.2ms | Allocations: 18732)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:55:31 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:55:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1161)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2098)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2312)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:55:36 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2853)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3409)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:55:50 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3661)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4171)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:55:51 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:55:51 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3666)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4183)
+
+
+Started GET "/" for ::1 at 2026-06-04 19:56:18 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/home" for ::1 at 2026-06-04 19:56:19 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 15490)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 15704)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 19:56:21 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3178)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4100)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 4658)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 19:56:23 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3661)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 4172)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 19:56:24 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/play" for ::1 at 2026-06-04 19:56:24 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3666)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4181)
+
+
+Started GET "/" for ::1 at 2026-06-04 20:04:57 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 14)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/home" for ::1 at 2026-06-04 20:04:58 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5457)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 1.1ms | Allocations: 5671)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 20:05:00 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2853)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3414)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 20:05:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3661)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 4175)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 20:05:04 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:05:04 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3666)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4191)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:07:54 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4611)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 19145)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.2ms | Allocations: 20300)
+
+
+Started GET "/" for ::1 at 2026-06-04 20:07:54 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 226)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 758)
+
+
+Started GET "/" for ::1 at 2026-06-04 20:07:55 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/home" for ::1 at 2026-06-04 20:07:56 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2363)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 2781)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 20:07:59 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2175)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3097)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3735)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 20:08:01 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3141)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4063)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4636)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 20:08:05 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "3", "player_names" => ["", "", ""], "player_colors" => ["#000000", "#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:08:05 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3668)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4220)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:09:24 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4554)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 18918)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 20067)
+
+
+Started GET "/" for ::1 at 2026-06-04 20:09:25 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 226)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 758)
+
+
+Started GET "/home" for ::1 at 2026-06-04 20:09:25 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1425)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2365)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2782)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 20:09:27 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2175)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3097)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3727)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 20:09:28 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3140)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4062)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4639)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 20:09:30 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:09:30 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3666)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4220)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:12:23 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6764)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms | Allocations: 7281)
+
+
+Started GET "/" for ::1 at 2026-06-04 20:12:42 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/home" for ::1 at 2026-06-04 20:12:43 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2100)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2314)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 20:12:46 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2853)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3412)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 20:12:48 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3661)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4169)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 20:12:52 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "3", "player_names" => ["", "", ""], "player_colors" => ["#000000", "#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:12:52 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3668)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4189)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:13:19 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 6764)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 7281)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:14:43 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 6758)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.1ms | Allocations: 7269)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:19:15 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2758)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6787)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 7305)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:19:41 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4571)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 19089)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 1.2ms | Allocations: 20239)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:20:41 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6771)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 7286)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:22:04 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 6771)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 7287)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:22:13 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4559)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 18923)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 1.6ms | Allocations: 20069)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:22:31 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6785)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.1ms | Allocations: 7299)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:23:20 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6772)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 7288)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:24:20 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6779)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 7292)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:29:19 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6779)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms | Allocations: 7299)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:30:32 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6773)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.1ms | Allocations: 7289)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:31:31 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6780)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 7299)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:31:41 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6773)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 7282)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:31:50 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6773)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 7288)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:33:43 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4030)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 21310)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms | Allocations: 21824)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:35:41 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 11.5ms | Allocations: 5925)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 20452)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 1.2ms | Allocations: 21607)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:36:07 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3668)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4179)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:52:18 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 11.5ms | Allocations: 5736)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 20100)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 1.0ms | Allocations: 21261)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:52:28 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2780)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3703)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4224)
+
+
+Started GET "/" for ::1 at 2026-06-04 20:52:29 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hashimoto/.rbenv/versions/4.0.4/lib/ruby/gems/4.0.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 226)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 758)
+
+
+Started GET "/home" for ::1 at 2026-06-04 20:52:33 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1424)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2364)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 2782)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 20:52:35 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2175)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3097)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3731)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 20:52:37 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3141)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 4063)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4632)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 20:52:56 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["name", "aaa"], "player_colors" => ["#001e57", "#9aa60e"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:52:56 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2786)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3709)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 4270)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:53:37 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2786)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6816)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 7348)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 20:57:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3661)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 4178)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 20:57:05 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/play" for ::1 at 2026-06-04 20:57:05 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2778)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3701)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4222)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:01:25 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2778)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3701)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 4223)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:04:48 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2912)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 17430)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 1.3ms | Allocations: 18276)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:04:53 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3100)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3735)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:05:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4077)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 4796)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:05:19 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["haha", "aa"], "player_colors" => ["#d95000", "#cce8b5"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:05:19 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3189)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4112)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4735)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:09:58 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 17591)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 1.3ms | Allocations: 18440)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:10:01 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3737)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:10:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3153)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4076)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4797)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:10:13 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["aa", "ii"], "player_colors" => ["#b51a00", "#96d35f"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:10:13 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3155)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4078)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 4708)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:13:01 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4610)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 18959)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.1ms | Allocations: 20113)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:13:09 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["haha", "ii"], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:13:09 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3156)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4079)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4707)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:15:25 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4610)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 18959)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 1.0ms | Allocations: 20112)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:15:30 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["haha", "ii"], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:15:30 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3155)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 4078)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4713)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:24:03 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2722)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 17291)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.1ms | Allocations: 18137)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:24:05 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2213)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3138)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3777)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:24:07 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3153)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4076)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4794)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:24:16 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["haha", "ii"], "player_colors" => ["#9a244f", "#4f5503"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:24:16 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3180)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4103)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4739)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:27:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2914)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 17444)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 1.2ms | Allocations: 18293)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:27:08 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 3736)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:27:10 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4075)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 4799)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:27:15 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["aa", "ii"], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:27:15 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4452)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5375)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 6011)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:29:02 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2914)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 17432)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 1.4ms | Allocations: 18278)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:29:04 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 3740)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:29:09 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4075)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4799)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:29:22 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["aa", "ii"], "player_colors" => ["#d95000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:29:22 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3155)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4078)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 4714)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:33:15 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2795)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3718)
+Completed 200 OK in 17ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 4265)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:38:12 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4601)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 18965)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.2ms | Allocations: 20142)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:44:46 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2741)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 17429)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 1.1ms | Allocations: 18279)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:46:00 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3462)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 17640)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 18289)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:51:56 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 12.4ms | Allocations: 4603)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 18782)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 1.0ms | Allocations: 19505)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:52:06 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["ああ", "っq"], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:52:06 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4410)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5333)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 5970)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:52:47 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1166)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 15498)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 15712)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:52:49 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3192)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4114)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4690)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:52:50 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3661)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 4180)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:52:57 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["aa", "ii"], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:52:57 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3685)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 4227)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:53:28 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 15513)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 15727)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:53:30 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2853)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3420)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:53:31 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3661)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4183)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:53:32 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:53:32 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4051)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4974)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 5525)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:54:09 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1171)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 15503)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 15717)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:54:11 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3184)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4106)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4673)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:54:26 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2753)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3684)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 4211)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:54:28 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:54:28 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2775)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3698)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4244)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:56:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2921)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 17593)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.1ms | Allocations: 18442)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:56:08 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3100)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3746)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:56:10 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3153)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 4076)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 4807)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:56:11 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:56:11 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3108)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4031)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4667)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:57:36 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2922)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 17440)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 1.4ms | Allocations: 18286)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:57:39 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3100)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3741)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:57:40 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4075)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 4799)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:57:41 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:57:41 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3154)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4077)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4716)
+
+
+Started GET "/home" for ::1 at 2026-06-04 21:59:08 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2917)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 17435)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.1ms | Allocations: 18281)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 21:59:10 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3100)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3741)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 21:59:12 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 4075)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4801)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 21:59:13 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/play" for ::1 at 2026-06-04 21:59:13 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3153)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 4076)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4718)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:01:14 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2933)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 17621)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 1.1ms | Allocations: 18471)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:01:15 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2202)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3124)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3764)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:01:17 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3153)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4076)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4797)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:01:18 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:01:18 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2338)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3261)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3898)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:01:28 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1991)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2914)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3461)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:02:11 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1171)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2108)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 2322)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:02:13 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2853)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3426)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:02:14 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3661)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 4182)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:02:16 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:02:16 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1991)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2914)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3461)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:03:58 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1991)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2914)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 3453)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:06:11 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2910)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 17428)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 1.2ms | Allocations: 18274)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:06:13 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3434)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4356)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 4996)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:06:14 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4075)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4805)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:06:16 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:06:16 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2296)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3219)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3853)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:12:10 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 15761)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 15975)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:12:13 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3185)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4107)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4677)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:12:22 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3661)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4183)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:12:24 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:12:24 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2881)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3432)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:13:33 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3214)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 17548)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms | Allocations: 18084)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:13:38 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1173)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2110)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 2324)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:13:39 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2853)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3422)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:13:42 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2740)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3662)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4178)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:13:43 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:13:43 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2881)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3426)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:15:15 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1170)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 15502)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 15716)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:15:17 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3189)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4111)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4685)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:15:18 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3661)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4181)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:15:20 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:15:20 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2881)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3425)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:15:23 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2881)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3426)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:16:53 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1174)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 15506)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 15720)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:16:54 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3197)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4119)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4687)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:16:58 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3661)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4184)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:16:59 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:16:59 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2881)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3420)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:18:03 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1173)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 15505)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 15719)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:18:05 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3211)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4133)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4700)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:18:10 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3661)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 4183)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:18:12 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:18:12 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2881)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3422)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:19:19 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2881)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3422)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:19:24 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2881)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3423)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:22:45 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 15685)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms | Allocations: 15899)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:22:47 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3227)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4149)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 4724)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:22:48 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2740)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3662)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 4180)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:22:49 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:22:49 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2881)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3425)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:25:04 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2923)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 17441)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 1.2ms | Allocations: 18290)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:25:06 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3100)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3741)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:25:08 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 4075)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 4803)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:25:10 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:25:10 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2294)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3217)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3857)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:25:46 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 17433)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 1.1ms | Allocations: 18279)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:25:47 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3100)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3738)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:25:49 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3152)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4075)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4802)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:25:51 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:25:51 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2293)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 3216)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3858)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:26:31 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 17437)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 1.0ms | Allocations: 18283)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:26:33 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3100)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3749)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:26:35 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3192)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4124)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4856)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:26:36 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:26:36 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3166)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4089)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4723)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:28:02 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3685)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 4237)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:40:03 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3016)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3939)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 1.0ms | Allocations: 4488)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:47:11 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 15909)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.4ms | Allocations: 16123)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:47:13 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2853)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3426)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:47:14 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3661)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4187)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:47:16 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:47:16 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4984)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 5536)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:47:33 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3685)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 4226)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:47:38 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3685)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4226)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:49:28 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1170)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2107)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 2321)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:49:29 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2853)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3425)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:49:30 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3661)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 4191)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:49:34 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:49:34 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3685)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4225)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:50:56 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3685)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 4229)
+
+
+Started GET "/home" for ::1 at 2026-06-04 22:58:46 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/top.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 15759)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.1ms | Allocations: 15973)
+
+
+Started POST "/home/generate" for ::1 at 2026-06-04 22:58:48 +0900
+Processing by HomeController#generate as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "prompt" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering home/generate.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered home/generate.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1931)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2853)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3423)
+
+
+Started GET "/play/input-member" for ::1 at 2026-06-04 22:58:51 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3661)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4178)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 22:58:53 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+Redirected to http://localhost:3000/play
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:58:53 +0900
+Processing by PlayController#play as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4053)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4976)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 5524)
+
+
+Started GET "/play" for ::1 at 2026-06-04 22:59:00 +0900
+Processing by PlayController#play as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/play.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/play.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2775)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3707)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 4248)
+
+
