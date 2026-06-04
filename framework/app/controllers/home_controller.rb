@@ -43,10 +43,4 @@ class HomeController < ApplicationController
     render :generate
   end
 
-  def save_map
-    map_data = params[:map_data]
-    # ここでmap_dataをデータベースに保存する処理を実装する
-    # 例: Map.create(data: map_data)
-    head :ok
-  end
 end

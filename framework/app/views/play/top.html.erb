@@ -79,20 +79,4 @@
 </div>
 </div>
 
-# <% if @map.present? %>
-#   <div class="sugoroku-display">
-#     <h2><%= @map.map_name %></h2>
 
-#     <% @squares.each do |square| %>
-#       <p>
-#         <%= square.position %>マス目:
-#         <%= square.square_text %>
-#         （<%= square.effect %>, <%= square.value %>）
-#       </p>
-#     <% end %>
-#   </div>
-# <% else %>
-#   <div class="sugoroku-display">
-#     <p>生成されたスゴロクがありません。</p>
-#   </div>
-# <% end %>
