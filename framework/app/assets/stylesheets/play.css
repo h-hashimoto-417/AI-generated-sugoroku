@@ -21,17 +21,48 @@
 .modal-content h2 {
    margin-top: 0;
    margin-bottom: 20px;
-   font-size: 20px;
+   font-size: 28px;
    color: #333;
    text-align: center;
-   font-family: 'Hiragino Sans', 'Arial Narrow', Arial, sans-serif;
+   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+}
+.modal-content h3 {
+   margin-top: 0;
+   margin-bottom: 20px;
+   font-size: 22px;
+   color: #333;
+   text-align: left;
+   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+}
+.modal-content p {
+   margin-top: 0;
+   margin-bottom: 20px;
+   font-size: 18px;
+   color: #333;
+   text-align: left;
+   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
 }
 
 .player-count {
-  width: 40px;
-  font-size: 20px;
-  padding: 10px;
+  color: #333;
+  margin-left: 70px;
+  width: 100px;
+  font-size: 16px;
+  padding: 8px 10px;
   text-align: center;
+}
+
+.player-name-container {
+  margin-left: 70px;
+  width: 200px;
+  font-size: 16px;
+  padding: 8px 10px;
+  text-align: left;
+}
+.player-names input {
+  width: 100%;
+  padding: 6px;
+  font-size: 16px;
 }
 
 .sugoroku-display {
@@ -53,14 +84,14 @@
   position: relative;
   width: 80%;
   height: 600px;
-  margin: 60px auto;
+  margin: 100px auto;
 }
 
 /* SVG（線のレイヤー） */
 #lines {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 60px;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -70,7 +101,7 @@
 #map {
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 60px;
   margin: 0 auto;
   z-index: 2;
 }

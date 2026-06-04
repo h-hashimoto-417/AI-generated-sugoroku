@@ -5,6 +5,14 @@ class HomeController < ApplicationController
   def generate
     prompt = params[:prompt]
 
+    # テスト用: プロンプトが空の場合はサンプルマップを表示
+    if prompt.blank?
+      json_path = Rails.root.join("maps","samplemap.json")
+      json_data = JSON.parse(File.read(json_path))
+      @sugoroku = json_data
+      return
+    end
+
     result = AiService.generate(prompt)
 
     map = Map.create!(

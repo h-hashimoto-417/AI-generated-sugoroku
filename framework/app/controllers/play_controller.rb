@@ -16,6 +16,10 @@ class PlayController < ApplicationController
           end
         }
       end
+    else
+        json_path = Rails.root.join("maps","samplemap.json")
+        json_data = JSON.parse(File.read(json_path))
+        @sugoroku = json_data
     end
   end
 

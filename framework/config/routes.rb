@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post "/home/generate" => "home#generate"
 
   get "/play" => "play#top"
-  get "/play/input-member" => "play#input_member"
+  post "/play/input-member" => "play#input_member"
 
   get "/signup" => "users#new"
   post "/signup" => "users#create"
