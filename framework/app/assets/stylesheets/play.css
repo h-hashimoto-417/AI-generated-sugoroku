@@ -87,10 +87,11 @@
 }
 
 .sugoroku-display {
-  margin-top: 150px;
+  margin: 150px auto;
   text-align: center;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .show-map-title {
@@ -115,7 +116,7 @@
   left: 60px;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 5;
 }
 
 /* マスのレイヤー */
@@ -124,7 +125,7 @@
   top: 0;
   left: 60px;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 7;
 }
 
 .square-event {
@@ -239,4 +240,56 @@
 .square-container:hover .tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* 画面からはみ出たマップをスクロールさせたい場合は要調整 */
+}
+
+/* サイコロの表示層 */
+.dice-layer {
+  position: fixed; /* 💡 画面に対して固定 */
+  bottom: 60px;    /* 画面右下に配置する例 */
+  right: 40px;
+  z-index: 10;     /* マップより手前 */
+}
+.dice-button {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  font-size: 24px;
+  /* ボタンを目立たせる装飾 */
+  background: #ffcc00;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none;
+}
+
+/* ウィンドウ共通スタイル */
+.window-layer {
+  position: fixed; /* 画面の定位置に浮かせる */
+  background: transparent;
+  border-radius: 8px;
+  padding: 20px;
+}
+.status-window {
+  width: 300px;
+  height: 530px;
+  background-color: rgba(222, 222, 222, 0.6);
+  border: 3px solid #323747;
+  border-radius: 10px;
+  bottom: 60px;
+  left: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 30;
+  display: none;
+}
+.status-window-text {
+  width: 300px;
+  height: 530px;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  background-color: transparent;
 }

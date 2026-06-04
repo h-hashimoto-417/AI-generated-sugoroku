@@ -11273,3 +11273,1092 @@ No template found for PlayController#input_member, rendering head :no_content
 Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 544)
 
 
+Started GET "/play" for ::1 at 2026-06-04 15:03:11 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4413)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 21778)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 1.3ms | Allocations: 22923)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:03:13 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 544)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:03:38 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4692)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 19197)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 1.2ms | Allocations: 20342)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:03:39 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 546)
+
+
+Started GET "/home/generate" for ::1 at 2026-06-04 15:03:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/generate"):
+  
+Started GET "/play" for ::1 at 2026-06-04 15:04:31 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2757)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6711)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 7215)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:04:32 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:04:50 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2757)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 6710)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 7217)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:04:51 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:06:46 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6696)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 7202)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:06:47 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:13:35 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2990)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6941)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.1ms | Allocations: 7448)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:13:37 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:33:23 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4422)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 21957)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 1.3ms | Allocations: 23104)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:33:28 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 545)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:34:40 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2758)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6735)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 7238)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:34:42 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:34:58 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 6704)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 7209)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:35:00 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 293)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:35:55 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6696)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 7204)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:35:57 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:37:56 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6702)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.1ms | Allocations: 7210)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:37:57 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:38:16 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 6703)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 7208)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:38:17 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:38:34 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 6703)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 7216)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:38:36 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:39:31 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2757)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6731)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms | Allocations: 7237)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:39:32 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 293)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:40:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 6703)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 7212)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:40:05 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:40:16 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6703)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 7209)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:40:17 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:41:20 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6696)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 7203)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:41:21 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:41:46 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 6710)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 7215)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:41:47 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:42:21 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6711)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 7220)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:42:22 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:44:46 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4641)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 19146)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.3ms | Allocations: 20291)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:44:47 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 541)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:47:12 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4611)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 18954)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 1.4ms | Allocations: 20099)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:47:13 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 549)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:50:47 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 6700)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 7210)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:50:49 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:51:03 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2757)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6725)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 7231)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:51:04 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:51:35 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6704)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 7216)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:51:36 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 292)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:51:50 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6697)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 7202)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:51:51 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:52:07 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6704)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 7215)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:52:08 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:52:19 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 6711)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 7212)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:52:20 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/play" for ::1 at 2026-06-04 15:55:42 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6722)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms | Allocations: 7234)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 15:55:42 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:05:04 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4440)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 21998)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 1.3ms | Allocations: 23141)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:05:05 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 544)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:17:44 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2990)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 6961)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.3ms | Allocations: 7469)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:17:45 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 292)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:18:29 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6707)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 7211)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:18:30 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:19:23 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4647)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 19151)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.2ms | Allocations: 20295)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:19:24 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 543)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:19:48 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6711)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 7219)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:19:49 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:20:21 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 6709)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 7213)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:20:22 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:31:07 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2990)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6965)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.8ms | Allocations: 7477)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:31:08 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:31:53 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2758)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6734)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 7241)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:31:54 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 292)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:34:40 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6702)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms | Allocations: 7214)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:34:41 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:40:56 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4430)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 21988)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 1.1ms | Allocations: 23131)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:40:58 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 550)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:43:15 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2756)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6764)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 7269)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:43:17 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:43:41 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 6728)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 7233)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:43:43 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:45:13 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 6721)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 7232)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:45:14 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:47:30 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4630)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 22215)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 1.3ms | Allocations: 23357)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:47:31 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 545)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:52:08 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  Rendered play/top.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1632)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1738)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2974)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="header">
+    <div>
+      <span class="mini-title-ai">
+        <%= image_tag "heart2.PNG", class: "mini-heart-bg" %>
+        AI
+      </span>
+      <span class="mini-title-suru">する</span>
+      <div class="mini-title-wrap">
+        <span class="mini-bg-text">スゴロク</span>
+        <span class="mini-fg-text">スゴロク</span>
+      </div>
+    </div>
+    <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+    <div>
+        <% if current_user %>
+            <span><%= current_user.uname %> さん</span>
+
+            <%= button_to "ログアウト",
+                "/logout",
+                method: :delete,
+                class: "login-button" %>
+        <% else %>
+            <button
+                class="login-button"
+                onclick="location.href='/login'"
+            >
+                ログイン
+            </button>
+        <% end %>
+    </div>
+</div>
+
+<!-- プレイヤー登録モーダル -->
+<div id="overlay" class="overlay">
+  <div id="player-modal" class="modal">
+    <div class="modal-content">
+      <h2>プレイヤー登録</h2>
+      
+      <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>   
+
+        <div style="display: flex; align-items: center; justify-content: space-between;">   
+          <h3 style="display: inline">・プレイヤー人数</h3>
+          <%= f.select :player_count, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4]], selected: 2), 
+              {include_blank: "人数を選んでね"}, 
+              { class: "player-count", onchange: "updatePlayerFields(this.value)"} %>
+        </div>
+          
+        <h3>・プレイヤー情報</h3>
+        <div id="player-info-container" class="player-info-container">
+        </div>
+        <script>
+          function updatePlayerFields(count) {
+            const container = document.getElementById('player-info-container');
+            container.innerHTML = ''; // 一度中身をリセット
+
+            // 選択された人数（count）の分だけループして入力欄を作成
+            for (let i = 0; i < count; i++) {
+              const player = document.createElement( 'div' );              
+              const name = document.createElement('input');
+              const color = document.createElement('input');
+
+              player.className = 'player-info';
+              name.type = 'text';
+              name.name = 'player_names[]'; // Railsが配列として受け取れる名前
+              name.placeholder = `プレイヤー ${i + 1}`;
+              name.className = 'player-names';
+              color.type = 'color';
+              color.className = 'player-color';
+              color.name = 'player_colors[]';
+
+              player.appendChild(name);
+              player.appendChild(color);
+              
+              container.appendChild(player);
+            }
+          }
+
+          // 画面が表示された最初（初期値: 2人）にも動くように実行しておく
+          document.addEventListener('DOMContentLoaded', () => {
+            updatePlayerFields(2); 
+          });
+        </script>
+        <div style="text-align: center; margin-top: 40px">
+          <%= f.submit "START", class: "action-button", onclick: "closeModal()" %>
+        </div>
+        <script>
+            function closeModal() {
+
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("status-window").style.display = "block";
+            document.getElementById("dice").style.display = "block";
+            }
+        </script>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- ゲーム画面の表示 -->
+<div class="game-container">
+
+  <!-- すごろくmapの表示 -->
+  <div class="sugoroku-display">      
+    <div id="board">
+      <!-- 線用レイヤー -->
+      <svg id="lines"></svg>
+
+      <!-- マス用レイヤー -->
+      <div id="map"></div>
+    </div>
+
+    <script>
+      // RailsのデータをJSに渡す（重要）
+      const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+    </script>
+
+    <!-- 外部JS読み込み -->
+    <%= javascript_include_tag "sugoroku_map" %>
+  </div>
+
+  <!-- サイコロの表示 -->
+  <div class="dice-layer">
+      <button id="dice" class="dice-button">🎲 サイコロを振る</button>
+  </div>
+
+  <!-- ステータスウィンドウの表示 -->
+  <div id="status-window" class="window-layer status-window">
+    <div class="status-window-text">
+      <h2>ターン：</h2>
+      <h3>サイコロを振る人：</h3>
+      <h3><%= # @player %> さん</h3>
+    </div>
+
+  </div>
+  
+
+</div>
+
+
+
+
+
+
+):
+1:    <div class="header">
+2:        <div>
+3:          <span class="mini-title-ai">
+4:            <%= image_tag "heart2.PNG", class: "mini-heart-bg" %>
+5:            AI
+6:          </span>
+7:          <span class="mini-title-suru">する</span>
+8:          <div class="mini-title-wrap">
+9:            <span class="mini-bg-text">スゴロク</span>
+10:            <span class="mini-fg-text">スゴロク</span>
+11:          </div>
+12:        </div>
+13:        <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
+14:        <div>
+15:            <% if current_user %>
+16:                <span><%= current_user.uname %> さん</span>
+17:    
+18:                <%= button_to "ログアウト",
+19:                    "/logout",
+20:                    method: :delete,
+21:                    class: "login-button" %>
+22:            <% else %>
+23:                <button
+24:                    class="login-button"
+25:                    onclick="location.href='/login'"
+26:                >
+27:                    ログイン
+28:                </button>
+29:            <% end %>
+30:        </div>
+31:    </div>
+32:    
+33:    <!-- プレイヤー登録モーダル -->
+34:    <div id="overlay" class="overlay">
+35:      <div id="player-modal" class="modal">
+36:        <div class="modal-content">
+37:          <h2>プレイヤー登録</h2>
+38:          
+39:          <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>   
+40:    
+41:            <div style="display: flex; align-items: center; justify-content: space-between;">   
+42:              <h3 style="display: inline">・プレイヤー人数</h3>
+43:              <%= f.select :player_count, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4]], selected: 2), 
+44:                  {include_blank: "人数を選んでね"}, 
+45:                  { class: "player-count", onchange: "updatePlayerFields(this.value)"} %>
+46:            </div>
+47:              
+48:            <h3>・プレイヤー情報</h3>
+49:            <div id="player-info-container" class="player-info-container">
+50:            </div>
+51:            <script>
+52:              function updatePlayerFields(count) {
+53:                const container = document.getElementById('player-info-container');
+54:                container.innerHTML = ''; // 一度中身をリセット
+55:    
+56:                // 選択された人数（count）の分だけループして入力欄を作成
+57:                for (let i = 0; i < count; i++) {
+58:                  const player = document.createElement( 'div' );              
+59:                  const name = document.createElement('input');
+60:                  const color = document.createElement('input');
+61:    
+62:                  player.className = 'player-info';
+63:                  name.type = 'text';
+64:                  name.name = 'player_names[]'; // Railsが配列として受け取れる名前
+65:                  name.placeholder = `プレイヤー ${i + 1}`;
+66:                  name.className = 'player-names';
+67:                  color.type = 'color';
+68:                  color.className = 'player-color';
+69:                  color.name = 'player_colors[]';
+70:    
+71:                  player.appendChild(name);
+72:                  player.appendChild(color);
+73:                  
+74:                  container.appendChild(player);
+75:                }
+76:              }
+77:    
+78:              // 画面が表示された最初（初期値: 2人）にも動くように実行しておく
+79:              document.addEventListener('DOMContentLoaded', () => {
+80:                updatePlayerFields(2); 
+81:              });
+82:            </script>
+83:            <div style="text-align: center; margin-top: 40px">
+84:              <%= f.submit "START", class: "action-button", onclick: "closeModal()" %>
+85:            </div>
+86:            <script>
+87:                function closeModal() {
+88:    
+89:                document.getElementById("overlay").style.display = "none";
+90:                document.getElementById("status-window").style.display = "block";
+91:                document.getElementById("dice").style.display = "block";
+92:                }
+93:            </script>
+94:          <% end %>
+95:        </div>
+96:      </div>
+97:    </div>
+98:    
+99:    <!-- ゲーム画面の表示 -->
+100:    <div class="game-container">
+101:    
+102:      <!-- すごろくmapの表示 -->
+103:      <div class="sugoroku-display">      
+104:        <div id="board">
+105:          <!-- 線用レイヤー -->
+106:          <svg id="lines"></svg>
+107:    
+108:          <!-- マス用レイヤー -->
+109:          <div id="map"></div>
+110:        </div>
+111:    
+112:        <script>
+113:          // RailsのデータをJSに渡す（重要）
+114:          const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+115:        </script>
+116:    
+117:        <!-- 外部JS読み込み -->
+118:        <%= javascript_include_tag "sugoroku_map" %>
+119:      </div>
+120:    
+121:      <!-- サイコロの表示 -->
+122:      <div class="dice-layer">
+123:          <button id="dice" class="dice-button">🎲 サイコロを振る</button>
+124:      </div>
+125:    
+126:      <!-- ステータスウィンドウの表示 -->
+127:      <div id="status-window" class="window-layer status-window">
+128:        <div class="status-window-text">
+129:          <h2>ターン：</h2>
+130:          <h3>サイコロを振る人：</h3>
+131:          <h3><%= # @player %> さん</h3>
+132:        </div>
+133:    
+134:      </div>
+135:      
+136:    
+137:    </div>
+  
+app/views/play/top.html.erb:132: syntax errors found
+Started GET "/play" for ::1 at 2026-06-04 16:53:05 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4658)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 19162)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.2ms | Allocations: 20302)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:53:07 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 545)
+
+
+Started GET "/play" for ::1 at 2026-06-04 16:54:15 +0900
+Processing by PlayController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering play/top.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in 'ApplicationController#current_user'
+  Rendered play/top.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4652)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 19161)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.1ms | Allocations: 20308)
+
+
+Started POST "/play/input-member" for ::1 at 2026-06-04 16:54:18 +0900
+Processing by PlayController#input_member as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "player_count" => "2", "player_names" => ["", ""], "player_colors" => ["#000000", "#000000"], "commit" => "START"}
+No template found for PlayController#input_member, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 551)
+
+

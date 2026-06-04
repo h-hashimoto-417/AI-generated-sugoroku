@@ -86,9 +86,9 @@
         <script>
             function closeModal() {
 
-            document
-            .getElementById("overlay")
-            .style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("status-window").style.display = "block";
+            document.getElementById("dice").style.display = "block";
             }
         </script>
       <% end %>
@@ -96,9 +96,11 @@
   </div>
 </div>
 
-<!-- すごろくmapの表示 -->
-<div class="sugoroku-display">
-    
+<!-- ゲーム画面の表示 -->
+<div class="game-container">
+
+  <!-- すごろくmapの表示 -->
+  <div class="sugoroku-display">      
     <div id="board">
       <!-- 線用レイヤー -->
       <svg id="lines"></svg>
@@ -114,9 +116,27 @@
 
     <!-- 外部JS読み込み -->
     <%= javascript_include_tag "sugoroku_map" %>
+  </div>
+
+  <!-- サイコロの表示 -->
+  <div class="dice-layer">
+      <button id="dice" class="dice-button">🎲 サイコロを振る</button>
+  </div>
+
+  <!-- ステータスウィンドウの表示 -->
+  <div id="status-window" class="window-layer status-window">
+    <div class="status-window-text">
+      <h2>現在のターン：</h2>
+      <h3>サイコロを振る人：</h3>
+      <h3><!-- <%= @player %> --> さん</h3>
+    </div>
+
+  </div>
+  
+
 </div>
 
-<!-- ゲームウィンドウの表示 -->
+
 
 
 
