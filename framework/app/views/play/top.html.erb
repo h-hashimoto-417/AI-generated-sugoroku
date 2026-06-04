@@ -31,34 +31,68 @@
 </div>
 
 <!-- プレイヤー登録モーダル -->
-<div id="player-modal" class="modal">
-  <div class="modal-content">
-    <h2>プレイヤー登録</h2>
-    
-    <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>   
+<div id="overlay" class="overlay">
+  <div id="player-modal" class="modal">
+    <div class="modal-content">
+      <h2>プレイヤー登録</h2>
+      
+      <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>   
 
-      <div style="display: flex; align-items: center; justify-content: space-between;">   
-        <h3 style="display: inline">・プレイヤー人数</h3>
-        <%= f.select :player_count, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4]], selected: 2), {include_blank: "人数を選んでね"}, { class: "player-count" } %>
-      </div>
-        
-      <h3>・プレイヤーの名前</h3>
-      <div id="player-names" class="player-names-container">
-        <%= :player_count.each_with_index do |count, index| %>
-          <%= f.text_field "player_names[]", placeholder: "name#{index + 1}", class: "player-names" %>
-        <% end %>
-      </div>
+        <div style="display: flex; align-items: center; justify-content: space-between;">   
+          <h3 style="display: inline">・プレイヤー人数</h3>
+          <%= f.select :player_count, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4]], selected: 2), 
+              {include_blank: "人数を選んでね"}, 
+              { class: "player-count", onchange: "updatePlayerFields(this.value)"} %>
+        </div>
+          
+        <h3>・プレイヤー情報</h3>
+        <div id="player-info-container" class="player-info-container">
+        </div>
+        <script>
+          function updatePlayerFields(count) {
+            const container = document.getElementById('player-info-container');
+            container.innerHTML = ''; // 一度中身をリセット
 
-      <%= f.submit "決定", class: "action-button", onclick: "closeModal()" %>
-      <script>
-          function closeModal() {
+            // 選択された人数（count）の分だけループして入力欄を作成
+            for (let i = 0; i < count; i++) {
+              const player = document.createElement( 'div' );              
+              const name = document.createElement('input');
+              const color = document.createElement('input');
 
-          document
-          .getElementById("player-modal")
-          .style.display = "none";
+              player.className = 'player-info';
+              name.type = 'text';
+              name.name = 'player_names[]'; // Railsが配列として受け取れる名前
+              name.placeholder = `プレイヤー ${i + 1}`;
+              name.className = 'player-names';
+              color.type = 'color';
+              color.className = 'player-color';
+              color.name = 'player_colors[]';
+
+              player.appendChild(name);
+              player.appendChild(color);
+              
+              container.appendChild(player);
+            }
           }
-      </script>
-    <% end %>
+
+          // 画面が表示された最初（初期値: 2人）にも動くように実行しておく
+          document.addEventListener('DOMContentLoaded', () => {
+            updatePlayerFields(2); 
+          });
+        </script>
+        <div style="text-align: center; margin-top: 40px">
+          <%= f.submit "START", class: "action-button", onclick: "closeModal()" %>
+        </div>
+        <script>
+            function closeModal() {
+
+            document
+            .getElementById("overlay")
+            .style.display = "none";
+            }
+        </script>
+      <% end %>
+    </div>
   </div>
 </div>
 

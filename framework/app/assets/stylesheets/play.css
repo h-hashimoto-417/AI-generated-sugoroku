@@ -1,4 +1,4 @@
-.modal {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,14 +8,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
-.modal-content {
+.modal {
   background-color: white;
   padding: 40px;
   border-radius: 12px;
   width: 400px;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.modal-content {
+  min-height: 200px;
 }
 
 .modal-content h2 {
@@ -52,17 +58,32 @@
   text-align: center;
 }
 
-.player-name-container {
-  margin-left: 70px;
-  width: 200px;
+.player-info-container {
+  margin-left: 20px;
+  width: 300px;
   font-size: 16px;
   padding: 8px 10px;
   text-align: left;
 }
-.player-names input {
-  width: 100%;
+.player-info {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-around;
+}
+.player-names {
+  width: 200px;
   padding: 6px;
-  font-size: 16px;
+  font-size: 12px;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+
+}
+.player-color {
+  width: 60px;
+  height: 30px;
+  margin-left: 50px;
+  border: 1px solid #a8a8a8;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .sugoroku-display {
