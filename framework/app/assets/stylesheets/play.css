@@ -87,8 +87,8 @@
 }
 
 .sugoroku-display {
-  width: 80%;
-  margin: 60px auto;
+  margin-top: 150px;
+  text-align: center;
   display: flex;
   justify-content: center;
 }
