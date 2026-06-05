@@ -14,6 +14,8 @@ class HomeController < ApplicationController
     end
 
     result = AiService.generate(prompt)
+    puts JSON.pretty_generate(result)
+
 
     map = Map.create!(
       map_name: result["title"],

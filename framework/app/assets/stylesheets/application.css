@@ -186,15 +186,15 @@
  }
 
  .login-button {
-    margin-right: 50px;
+    margin-right: 60px;
     padding: 7px 14px;
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
-    color: #28a745;
-    background-color: white;
+    color: #687786;
+    background-color: transparent;
     border: none;
-    border-radius: 7px;
-    border: 2px solid #28a745;
+    border-radius: 4px;
+    border: 3px solid #687786;
     cursor: pointer;
  }
 

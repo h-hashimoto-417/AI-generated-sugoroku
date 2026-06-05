@@ -28,6 +28,8 @@ class AiService
       effectには "none", "move", "skip", "roll_again", "finish" のいずれかを使ってください。
       valueは効果に応じた数値にしてください。
       "event"タイプのマスの間には、"normal"タイプのマスを最低1つ、最大4つまで入れてください。
+      "event"タイプのマスのeffectは、"move", "skip", "roll_again"のいずれかを使用してください。
+      "event"タイプのマスのeffectはが"move"のときは、valueは0以外の整数を指定し、textに何マス動くのかの指示を必ず入れてください。
       JSON以外の説明文は書かないでください。
     TEXT
   end

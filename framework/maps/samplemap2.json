@@ -1,0 +1,113 @@
+{
+  "title": "路地裏大決戦！カラスとネコ",
+  "squares": [
+    {
+      "type": "start",
+      "text": "路地裏のゴミ捨て場へ！勝負開始！",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "normal",
+      "text": "今日のゴミはなんだろう？キョロキョロ見回す。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "normal",
+      "text": "風でチラリと中身が見えた！期待が高まる。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "カラスが先にゴミ袋を発見！ネコは悔しそうに1回休み。",
+      "effect": "skip",
+      "value": 1
+    },
+    {
+      "type": "normal",
+      "text": "生ゴミの匂いがする…！慎重に進む。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "normal",
+      "text": "古雑誌の山を乗り越える。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "ネコが物陰から奇襲！カラスは驚いて2マス戻る。",
+      "effect": "move",
+      "value": -2
+    },
+    {
+      "type": "normal",
+      "text": "誰もいないか確認。物音がしない。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "住人が窓を開けて見てる！びっくりしてもう一度サイコロを振る。",
+      "effect": "roll_again",
+      "value": 0
+    },
+    {
+      "type": "normal",
+      "text": "隠れてやり過ごそう。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "normal",
+      "text": "空き缶を蹴飛ばしてしまった！大丈夫かな？",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "カラスが空から急降下！ネコは逃げ出して3マス戻る。",
+      "effect": "move",
+      "value": -3
+    },
+    {
+      "type": "normal",
+      "text": "静かに獲物を狙う時間だ。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "ネコが素早くゴミ箱を漁る！見事な早業で3マス進む。",
+      "effect": "move",
+      "value": 3
+    },
+    {
+      "type": "normal",
+      "text": "あと少しで一番良い場所だ！",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "野良犬が乱入してきて大混乱！仕方なく1回休み。",
+      "effect": "skip",
+      "value": 1
+    },
+    {
+      "type": "normal",
+      "text": "最終決戦に向けて力をためる。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "goal",
+      "text": "最高のお宝ゲット！路地裏の勝者は君だ！",
+      "effect": "finish",
+      "value": 0
+    }
+  ]
+}
