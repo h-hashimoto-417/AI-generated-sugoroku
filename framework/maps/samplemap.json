@@ -14,10 +14,34 @@
       "value": 1
     },
     {
+      "type": "normal",
+      "text": "鴨川デルタで一休み。景色を楽しむが、効果なし。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "event",
+      "text": "宇治の茶畑で美味しいお茶をいただき、元気回復！もう一度サイコロを振る！",
+      "effect": "roll_again",
+      "value": 0
+    },
+    {
       "type": "event",
       "text": "滋賀県 逢坂の関を越える！順調に進んで1マス進む！",
       "effect": "move",
       "value": 1
+    },
+    {
+      "type": "normal",
+      "text": "大津の街並みを楽しむ。",
+      "effect": "none",
+      "value": 0
+    },
+    {
+      "type": "normal",
+      "text": "川沿いの道を歩く。風が気持ちいい！",
+      "effect": "none",
+      "value": 0
     },
     {
       "type": "event",

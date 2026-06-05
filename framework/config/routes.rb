@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   get "/home" => "home#top"
   post "/home/generate" => "home#generate"
 
-  get "/play" => "play#top"
-  get "/play/input-member" => "play#input_member"
+  get "/play/input-member" => "play#top"
+  post "/play/input-member" => "play#input_member"
+  get "/play" => "play#play"
+
 
   get "/signup" => "users#new"
   post "/signup" => "users#create"

@@ -19,6 +19,7 @@ class AiService
         "squares": [
           {"type": "start", "text": "スタート", "effect": "none", "value": 0},
           {"type": "event", "text": "イベント内容", "effect": "move", "value": 2},
+          {"type": "normal", "text": "何も起こらないマス", "effect": "none", "value": 0 },
           {"type": "event", "text": "イベント内容", "effect": "skip", "value": 1},
           {"type": "goal", "text": "ゴール", "effect": "finish", "value": 0}
         ]
@@ -26,6 +27,7 @@ class AiService
 
       effectには "none", "move", "skip", "roll_again", "finish" のいずれかを使ってください。
       valueは効果に応じた数値にしてください。
+      "event"タイプのマスの間には、"normal"タイプのマスを最低1つ、最大4つまで入れてください。
       JSON以外の説明文は書かないでください。
     TEXT
   end
