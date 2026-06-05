@@ -1,12 +1,11 @@
 //const svg = document.getElementById("lines");
 
-const squares = sugoroku.squares;
-
 function renderMap() {  
   const cols = 7;
   const size = 130;
   const map = document.getElementById("map");
   const svg = document.getElementById("lines");
+  const squares = sugoroku.squares;
 
   // 画面遷移した時に、前のデータや描画が残らないように中身を綺麗にリセットする
   map.innerHTML = '';
@@ -98,5 +97,10 @@ function drawLine(svg, x1, y1, x2, y2) {
 }
 
 document.addEventListener('turbo:load', () => {
+  console.log('renderMap');
   renderMap();
+});
+
+document.addEventListener('map:rendered', () => {
+  console.log('map rendered');
 });

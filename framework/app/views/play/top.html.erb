@@ -36,7 +36,7 @@
     <div class="modal-content">
       <h2>プレイヤー登録</h2>
       
-      <%= form_with url: '/play/input-member', method: :post, local: true do |f| %>   
+      <%= form_with url: '/play/input-member', method: :post, data: { turbo: false }, local: true do |f| %>   
 
         <div style="display: flex; align-items: center; justify-content: space-between;">   
           <h3 style="display: inline">・プレイヤー人数</h3>

@@ -5,34 +5,142 @@ const square_cols = 7;
 const sqare_size = 130;
 const dice_size = 40;
 
+console.log('play_sugoroku.js loaded');
+
+document.addEventListener('turbo:load', () => {
+  console.log('turbo:load in play_sugoroku');
+});
+
+document.addEventListener('map:rendered', () => {
+  console.log('map:rendered received');
+});
+
+function renderMap() {  
+  const cols = 7;
+  const size = 130;
+  const map = document.getElementById("map");
+  const svg = document.getElementById("lines");
+  const squares = window.sugoroku.squares;
+
+  // 画面遷移した時に、前のデータや描画が残らないように中身を綺麗にリセットする
+  map.innerHTML = '';
+  svg.innerHTML = '';
+
+  const positions = [];
+
+  console.log("squaresの表示");
+
+  // --- マス生成 ---
+  squares.forEach((square, index) => {
+    const row = Math.floor(index / cols);
+    const colInRow = index % cols;
+    //console.log("index: %d, row: %d, colInRow: %d", index, row, colInRow);
+
+    const col = row % 2 === 0
+      ? colInRow
+      : (cols - 1 - colInRow);
+
+    const x = col * size;
+    const y = row * size;
+
+    positions.push({ x: x + 50, y: y + 40 }); // 中心点
+
+    const container = document.createElement("div");
+    container.className = "square-container";
+
+    container.style.left = `${x}px`;
+    container.style.top = `${y}px`;
+
+    let squareClass;
+
+    switch (square.type) {
+    case "start":
+    case "goal":
+        squareClass = "square-start-goal";
+        break;
+    case "event":
+        squareClass = "square-event";
+        break;
+    default:
+        squareClass = "square-normal";
+    }
+
+    // div.title = square.text;
+
+    container.innerHTML = `
+    <div class="${squareClass}">
+        <span class="square-label">${index + 1}</span>
+    </div>
+
+    <div class="tooltip">
+        ${square.text}
+    </div>
+    `;
+
+    map.appendChild(container);
+
+    
+  });
+
+  // --- マス同士を接続 ---
+  for (let i = 0; i < positions.length - 1; i++) {
+    drawLine(
+      svg,
+      positions[i].x,
+      positions[i].y,
+      positions[i + 1].x,
+      positions[i + 1].y
+    );
+  }
+
+  document.dispatchEvent(new CustomEvent('map:rendered'));
+}
+
+// --- 線描画関数 ---
+function drawLine(svg, x1, y1, x2, y2) {
+  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+
+  line.setAttribute("x1", x1);
+  line.setAttribute("y1", y1);
+  line.setAttribute("x2", x2);
+  line.setAttribute("y2", y2);
+
+  line.setAttribute("stroke", "#dac9a8");
+  line.setAttribute("stroke-width", "16");
+
+  svg.appendChild(line);
+}
+
 function setInitialPositions() {
     console.log("コマの初期化");
 
     // 1. スタートマス（1マス目）の要素を取得
-    const startSquare = document.getElementById('square-1');
-    if (!startSquare) return;
+    //const startSquare = document.getElementById('square-1');
+    //if (!startSquare) return;
 
     // 2. スタートマスの座標（CSSの left と top）を取得
-    const startX = "0px"
-    const startY = "60px"
+    const startX = 60
+    const startY = 0
 
     // 3. ループ処理で、すべてのプレイヤーのコマをその場所に配置する
     //（例として最大4人分を想定して回す、または @player_count の数に合わせる）
-    for (let i = 1; i <= player_count; i++) {
+    for (let i = 1; i <= window.player_count; i++) {
+      console.log("for文の中身");
       const piece = document.getElementById(`player-${i}-piece`);
       
       if (piece) {
-        piece.style.left = startX;
-        piece.style.top = startY;
-        piece.style.backgroundColor = player_colors[i-1];
+        piece.style.left = startX + 'px';
+        piece.style.top = startY + 'px';
+        piece.style.backgroundColor = window.player_colors[i-1];
+        console.log("player" + i + "のコマ");
         
         // 💡 応用：全員が完全に重なると見づらいので、少しだけ位置をズラす（微調整）
         // 2人目は右に10px、3人目は下に10px... のようにずらすと全員が見やすくなります
-        if (i === 2) piece.style.left = (parseFloat(startX) + 15) + 'px';
-        if (i === 3) piece.style.top = (parseFloat(startY) + 15) + 'px';
+        if (i === 2) piece.style.left = (startX + dice_size + 15) + 'px';
+        if (i === 3) piece.style.top = (startY + dice_size + 15) + 'px';
         if (i === 4) {
-          piece.style.left = (parseFloat(startX) + dice_size + 15) + 'px';
-          piece.style.top = (parseFloat(startY) + dice_size + 15) + 'px';
+          piece.style.left = (startX + dice_size + 15) + 'px';
+          piece.style.top = (startY + dice_size + 15) + 'px';
         }
       }
     }
@@ -104,10 +212,34 @@ function movePlayerAndFollow(playerId, targetSquaresArray) {
   moveToNextSquare();
 }
 
-// 呼び出し処理はここ（JSファイル内）に書く！
 document.addEventListener('turbo:load', () => {
-    document.addEventListener('map:rendered', () => {
-    // マップがある状態で初期位置を設定
-    setInitialPositions();
-    }, { once: true }); //1回実行されたら自動で解除
+  console.log('renderMap');
+  renderMap();
+  setInitialPositions();
+  
 });
+
+// まとめたファイルの一番下（イベント周辺）
+
+// function executeGameInit() {
+//   console.log("=== すごろく初期化処理スタート ===");
+  
+//   // 1. 最新のマップ要素があるか確認
+//   const mapEl = document.getElementById("map");
+//   if (!mapEl) {
+//     console.log("このページには #map が存在しないため処理をスキップします");
+//     return;
+//   }
+
+//   // 2. マップを描画（この中で #square-1 が作られる）
+//   renderMap();
+
+//   // 3. 💡 描画直後、ブラウザがHTMLを認識する時間を「1ミリ秒」だけ作ってからコマを置く
+//   setTimeout(() => {
+//     console.log("コマの配置を開始します");
+//     setInitialPositions();
+//   }, 1);
+// }
+
+// // 💡 Turboのタイミングを「一番確実なタイミング」に指定する
+// document.addEventListener('turbo:load', executeGameInit);
