@@ -200,6 +200,12 @@
   text-align: center;
   cursor: pointer;
 }
+.square-labal {
+  width: 70px;
+  height: 70px;
+  font-size: 70px;
+  text-align: center;
+}
 
 /* 吹き出し */
 .tooltip {
@@ -269,7 +275,7 @@
   width: 40px;
   height: 40px;
   /* background-color: #8B1E3F; */
-  border: 2px solid #1f203d;
+  /* border: 2px solid #1f203d; */
   border-radius: 50%;
   /* top: 0px;
   left: 60px; */

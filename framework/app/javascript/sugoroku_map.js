@@ -28,6 +28,7 @@ function renderMap() {
     const x = col * size;
     const y = row * size;
 
+    // 線の始点と終点になる
     positions.push({ x: x + 50, y: y + 40 }); // 中心点
 
     const container = document.createElement("div");
@@ -37,24 +38,36 @@ function renderMap() {
     container.style.top = `${y}px`;
 
     let squareClass;
+    let square_text;
 
     switch (square.type) {
     case "start":
+        squareClass = "square-start-goal";
+        square_text = "START";
+        break;
     case "goal":
         squareClass = "square-start-goal";
+        square_text = "GOAL";
         break;
     case "event":
         squareClass = "square-event";
+        switch (square.effect) {
+          case "skip": square_text = "🚫"; break;
+          case "roll_again": square_text = "🔄"; break;
+          case "move": square_text = square.value < 0 ? "↩️" : "⏩️"; break;
+          default: square_text = "";
+        }
         break;
     default:
         squareClass = "square-normal";
+        square_text = "";
     }
 
     // div.title = square.text;
 
     container.innerHTML = `
     <div class="${squareClass}">
-        <span class="square-label">${index + 1}</span>
+        <h1 class="square-label">${square_text}</h1>
     </div>
 
     <div class="tooltip">
