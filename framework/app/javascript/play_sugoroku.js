@@ -19,28 +19,22 @@ document.addEventListener('map:rendered', () => {
 function setInitialPositions() {
     console.log("コマの初期化");
 
-    // 1. スタートマス（1マス目）の要素を取得
-    //const startSquare = document.getElementById('square-1');
-    //if (!startSquare) return;
-
-    // 2. スタートマスの座標（CSSの left と top）を取得
+    // スタートマスの座標を取得
     const startX = 60
     const startY = 0
 
-    // 3. ループ処理で、すべてのプレイヤーのコマをその場所に配置する
-    //（例として最大4人分を想定して回す、または @player_count の数に合わせる）
+    // ループ処理で、すべてのプレイヤーのコマをその場所に配置する
     for (let i = 1; i <= window.player_count; i++) {
-      console.log("for文の中身");
+      //console.log("for文の中身");
       const piece = document.getElementById(`player-${i}-piece`);
       
       if (piece) {
         piece.style.left = startX + 'px';
         piece.style.top = startY + 'px';
         piece.style.backgroundColor = window.player_colors[i-1];
-        console.log("player" + i + "のコマ");
+        //console.log("player" + i + "のコマ");
         
-        // 💡 応用：全員が完全に重なると見づらいので、少しだけ位置をズラす（微調整）
-        // 2人目は右に10px、3人目は下に10px... のようにずらすと全員が見やすくなります
+        // 全員が完全に重なると見づらいので、少しだけ位置をズラす（微調整）
         if (i === 2) piece.style.left = (startX + dice_size + 15) + 'px';
         if (i === 3) piece.style.top = (startY + dice_size + 15) + 'px';
         if (i === 4) {
@@ -52,7 +46,7 @@ function setInitialPositions() {
 }
 
 /**
- * 1. ターン開始時の演出
+ * ターン開始時の演出
  * 一瞬全体を引き（等倍）、そのあと自分のコマに自動ズームする
  */
 function startTurn(playerId) {
@@ -65,7 +59,8 @@ function startTurn(playerId) {
   
   // 1.5秒（1500ミリ秒）全体を見せた後、自分のコマにググッとズームインする
   setTimeout(() => {
-    focusOnPlayer(currentDisplayPlayer, 1.8); // 1.8倍にズーム
+    // playerのいるマスのインデックスとズーム倍率
+    focusOnPlayer(0, 1.0);
     
     // ズームが終わった頃（約0.5秒後）にサイコロボタンを活性化させるなどの処理
     setTimeout(() => {
@@ -75,7 +70,7 @@ function startTurn(playerId) {
 }
 
 /**
- * 2. サイコロの目が出て、コマが動くときの処理
+ * サイコロの目が出て、コマが動くときの処理
  * コマの移動アニメーションに合わせて、カメラも毎フレーム（またはコマの動きと同時に）追従させる
  */
 function movePlayerAndFollow(playerId, targetSquaresArray) {
@@ -117,10 +112,119 @@ function movePlayerAndFollow(playerId, targetSquaresArray) {
   moveToNextSquare();
 }
 
+/**
+ * サイコロの目がでる演出
+ */
+
+// プレイヤーの現在地を管理する変数（例）
+// play_sugoroku.js
+
+const player_positions = { 1: 0, 2: 0 };
+let current_turn = 1;
+
+// 💡 画面のHTML要素がすべて出揃ったタイミングで実行する
+window.addEventListener('load', () => {
+  console.log("play_sugoroku.js の読み込み＆画面準備完了！");
+
+  const diceButton = document.getElementById("dice");
+  const diceOverlay = document.getElementById('dice-overlay');
+  const pieceInWindow = document.getElementById('piece-in-window');
+  const playerNameInWindow = document.getElementById('playername-in-window');
+
+
+  // 💡 ボタンが見つからなかったら、コンソールに警告を出すようにする（デバッグ用）
+  if (!diceButton) {
+    console.error("エラー: HTMLの中に id='dice' のボタンが見つかりません！");
+    return;
+  }
+  if (!diceOverlay) {
+    console.warn("警告: HTMLの中に id='dice-overlay' の要素が見つかりません");
+  }
+
+  // ここで初めてクリックイベントを登録する
+  diceButton.addEventListener("click", () => {
+    console.log("diceボタンが押されました！");
+    
+    const target_number = Math.floor(Math.random() * 6) + 1; 
+    console.log("事前に決めた出したい目:", target_number);
+
+    diceButton.disabled = true;
+
+    if (diceOverlay) {
+        diceOverlay.classList.remove('is-hidden');
+    }
+    setTimeout(() => {
+        rollADie({
+        element: document.getElementById('dice-box'),
+        numberOfDice: 1,
+        values: [target_number],
+        delay: 3000,
+        callback: (result) => {
+            const final_dice_result = result[0];
+            
+            setTimeout(() => {
+                //alert(`${current_turn}Pは ${final_dice_result} が出ました！`);
+                if (diceOverlay) {
+                    diceOverlay.classList.add('is-hidden');
+                }
+
+                player_positions[current_turn] += final_dice_result;
+                const next_index = player_positions[current_turn];
+
+                const [new_x, new_y] = getSquareCoordinate(next_index);
+
+                const piece = document.getElementById(`player-${current_turn}-piece`);
+                if (piece) {
+                piece.style.left = new_x + "px";
+                piece.style.top = new_y + "px";
+                }
+
+                diceButton.disabled = false;
+                current_turn = current_turn === 1 ? 2 : 1;
+            }, 2000);
+            setTimeout(() => {
+                pieceInWindow.style.background = window.player_colors[current_turn-1];
+                playerNameInWindow.textContent = window.player_names[current_turn-1] + ' さん';
+            }, 2000);
+        }
+        });
+      }, 200);
+  });
+});
+// function diceAnimetion {
+
+// }
+
+
+// 特定のマスにズーム
+function focusOnPlayer(square_index, zoom) {
+    const camera = document.getElementById('map-camera');
+    const [x, y] = getSquareCoordinate(square_index);
+
+    camera.style.transform = 'translate(' + x + 'px, ' + y +'px) scale(' + zoom + ')';
+
+}
+
+// マスの座標を計算
+function getSquareCoordinate(square_index) {
+    const row = Math.floor(square_index / square_cols);
+    const colInRow = square_index % square_cols;
+    const col = row % 2 === 0
+      ? colInRow
+      : (square_cols - 1 - colInRow);
+
+    const x = col * sqare_size;
+    const y = row * sqare_size;
+
+    // 線の始点と終点になる
+    return [x+100 , y+20 ]; // 中心点
+}
+
 document.addEventListener('turbo:load', () => {
   console.log('setInitialPositions');
   //renderMap();
   setInitialPositions();
+  startTurn('player-1-piece');
   
 });
 

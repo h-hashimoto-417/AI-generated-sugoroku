@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/play/input-member" => "play#top"
   post "/play/input-member" => "play#input_member"
   get "/play" => "play#play"
+  post "/play" => "play#sugoroku"
+  get "/current-player" => "play#current_player"
 
 
   get "/signup" => "users#new"
