@@ -119,7 +119,7 @@ function movePlayerAndFollow(playerId, targetSquaresArray) {
 // プレイヤーの現在地を管理する変数（例）
 // play_sugoroku.js
 
-const player_positions = { 1: 0, 2: 0 };
+const player_positions = { 1: 0, 2: 0, 3: 0, 4: 0};
 let current_turn = 1;
 
 // 💡 画面のHTML要素がすべて出揃ったタイミングで実行する
@@ -180,7 +180,9 @@ window.addEventListener('load', () => {
                 }
 
                 diceButton.disabled = false;
-                current_turn = current_turn === 1 ? 2 : 1;
+                //current_turn = current_turn === 1 ? 2 : 1;
+                current_turn = current_turn === window.player_count ? 1 : ++current_turn;
+
             }, 2000);
             setTimeout(() => {
                 pieceInWindow.style.background = window.player_colors[current_turn-1];
