@@ -76,7 +76,7 @@
 
     <!-- ステータスウィンドウの表示 -->
     <div id="status-window" class="window-layer status-window">
-        <div class="status-window-text">
+        <div class="text">
             <h2>現在のターン：</h2>
             <h3>サイコロを振る人：</h3>
             <h3 id="playername-in-window"><%=@player_names[0]%>さん</h3>
@@ -87,6 +87,12 @@
     <!-- ストーリーウィンドウの表示 -->
     <div id="story-window" class="window-layer story-window">
     </div>    
+
+    <!-- 毎ターン数の表示 -->
+    <div id="turn-notice" class="window-layer show-turn-window">
+        <h2 id="turn-num-in-notice" style="font-size: 32px">ターン１<h2>
+        <p id="playername-in-notice" style="font-size: 20px"><%=@player_names[0]%>さん</p>
+    </div>
 
 </div>
 

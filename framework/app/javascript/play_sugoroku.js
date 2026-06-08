@@ -51,13 +51,25 @@ function setInitialPositions() {
  * ターン開始時の演出
  * 一瞬全体を引き（等倍）、そのあと自分のコマに自動ズームする
  */
-function startTurn(square_index) {    
+function startTurn(crr_turn, playerId, square_index) {    
     // まずは等倍(1.0)に戻して全体マップを見せる（中心をなんとなく中央に）
     // 画面中央（screenWidth/2, screenHeight/2）付近にマップが来るようにリセット
     const camera = document.getElementById('map-camera');
-    camera.style.transform = `translate(0px, 0px) scale(1.0)`;
-
     const diceButton = document.getElementById("dice");
+    const turnNotice = document.getElementById("turn-notice");
+    const turnNum = document.getElementById("turn-num-in-notice");
+    const playerName = document.getElementById("playername-in-notice");
+
+    camera.style.transform = `translate(0px, 0px) scale(1.0)`;
+    turnNum.innerText = `ターン${crr_turn}`;
+    playerName.innerText = `${window.player_names[playerId]}さん`;    
+
+    setTimeout(() => {
+        turnNotice.style.display = `block`;
+        setTimeout(() => {
+            turnNotice.style.display = 'none';
+        }, 1000);
+    }, 800);
     
     // 1.5秒（1500ミリ秒）全体を見せた後、自分のコマにググッとズームインする
     setTimeout(() => {
@@ -68,9 +80,9 @@ function startTurn(square_index) {
         setTimeout(() => {
             diceButton.disabled = false;
             diceButton.style.opacity = 1.0;
-            alert("サイコロを振ってください！");
+            //alert("サイコロを振ってください！");
         }, 500);
-    }, 1500);
+    }, 2100);
 }
 
 /**
@@ -155,7 +167,7 @@ window.addEventListener('load', () => {
 
         // ボタンの不活性化
         diceButton.disabled = true;
-        diceButton.style.opacity = 0.7;
+        diceButton.style.opacity = 0.5;
 
         if (diceOverlay) {
             diceOverlay.classList.remove('is-hidden');
@@ -217,10 +229,10 @@ window.addEventListener('load', () => {
                 setTimeout(() => {
                     pieceInWindow.style.background = window.player_colors[current_player-1];
                     playerNameInWindow.textContent = window.player_names[current_player-1] + ' さん';
-                    startTurn(player_positions[current_player]);
+                    startTurn(1, current_player-1, player_positions[current_player]);
                     // diceButton.disabled = false;    // サイコロボタンを活性化
                     // diceButton.style.opacity = 1.0;
-                }, 2000);
+                }, 3000);
             }
             });
         }, 200);
@@ -268,7 +280,7 @@ document.addEventListener('turbo:load', () => {
     console.log('setInitialPositions');
     //renderMap();
     setInitialPositions();
-    startTurn(0);
+    startTurn(1,0,0);
     
 });
 

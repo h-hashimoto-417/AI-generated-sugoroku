@@ -319,6 +319,9 @@
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+.dice-button:hover {
+  background: #ff5252;
+}
 
 #dice-box {
   width: 200px;   /* 元の基準サイズは200pxのままにしておく */
@@ -364,7 +367,7 @@
   align-items: center;
   z-index: 400;
 }
-.status-window-text {
+.status-window .text {
   width: 270px;
   height: auto;
   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
@@ -380,6 +383,21 @@
   bottom: 60px;
   left: 460px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
   z-index: 400;
+  display: none;
+}
+
+.show-turn-window {
+  width: 360px;
+  height: 150px;
+  padding: 10px;
+  top: 40%;
+  left: 36%;
+  align-self: center;
+  background-color: rgba(255, 245, 218, 0.972);
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  z-index: 402;
   display: none;
 }
