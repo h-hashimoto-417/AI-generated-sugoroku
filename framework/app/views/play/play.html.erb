@@ -13,7 +13,7 @@
     <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
     <div>
         <% if current_user %>
-            <span><%= current_user.uname %> さん</span>
+            <span class="add-usually-font" style="font-size: 14px;"><%= current_user.uname %> さん</span>
 
             <%= button_to "ログアウト",
                 "/logout",

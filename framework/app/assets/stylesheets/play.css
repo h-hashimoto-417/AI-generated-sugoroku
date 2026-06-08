@@ -28,28 +28,28 @@
 }
 
 .modal-content h2 {
-   margin-top: 0;
-   margin-bottom: 20px;
-   font-size: 28px;
-   color: #333;
-   text-align: center;
-   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
 }
 .modal-content h3 {
-   margin-top: 0;
-   margin-bottom: 20px;
-   font-size: 22px;
-   color: #333;
-   text-align: left;
-   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  text-align: left;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
 }
 .modal-content p {
-   margin-top: 0;
-   margin-bottom: 20px;
-   font-size: 18px;
-   color: #333;
-   text-align: left;
-   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
 }
 
 .player-count {
@@ -94,6 +94,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -124,6 +125,7 @@
   width: 80%;
   height: 600px;
   margin: 100px auto;
+  align-self: center;
 }
 
 /* SVG（線のレイヤー） */
@@ -141,58 +143,57 @@
   position: absolute;
   top: 0;
   left: 60px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   z-index: 7;
 }
 
-.square-event {
+.square {
   position: absolute;
-  transform: skewX(-30deg);
-  width: 70px;
-  height: 70px;
-  background-color: #e5e0ca;
-  border: 2px solid #687786;
-  border-radius: 10px;
-  outline: 2px dotted #687786;
-  outline-offset: -7px;
+  transform: skewX(-25deg);
+  width: 80px;
+  height: 80px;
+  
+  border-radius: 256px 15px 225px 16px / 14px 224px 13px 253px;
+  
+  outline-offset: -9px;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   cursor: pointer;
 }
-.square-start-goal {
-  position: absolute;
-  transform: skewX(-30deg);
-  width: 70px;
-  height: 70px;
+.square.event {
+  background-color: #e5e0ca;
+  border: 2px solid #687786;
+  
+  outline: 2px dashed #687786;
+  font-size: 40px;
+  text-align: center;
+}
+.square.start-goal {
   background-color: #8B1E3F;
   border: 2px solid #F5F0E6;
-  border-radius: 10px;
-  outline: 2px dotted #F5F0E6;
-  outline-offset: -7px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  outline: 2px dashed #F5F0E6;
+  font-size: 20px;
   text-align: center;
-  cursor: pointer;
   /* background-image: url("/assets/start_square.PNG");
   background-size: cover;
   background-position: center; */
 }
-.square-normal {
+.square.normal {
   position: absolute;
-  width: 60px;
+  width: 50px;
   height: 30px;
   top: 15px;
   transform: rotate(-10deg);
   background-color: #e5e0ca;
   border: 2px solid #687786;
-  border-radius: 50%;
+  border-radius: 49% 50% 56% 55% / 51% 52% 49% 57%;
   outline: 2px dotted #687786;
   outline-offset: -7px;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
@@ -202,6 +203,9 @@
   align-items: center;
   text-align: center;
   cursor: pointer;
+}
+.square:hover {
+  border: 4px solid #ff5638;
 }
 .square-labal {
   width: 70px;

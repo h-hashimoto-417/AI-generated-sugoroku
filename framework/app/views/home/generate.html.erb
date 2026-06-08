@@ -12,7 +12,7 @@
     </div>
     <div>
         <% if current_user %>
-            <span><%= current_user.uname %> さん</span>
+            <span class="add-usually-font" style="font-size: 14px;"><%= current_user.uname %> さん</span>
 
             <%= button_to "ログアウト",
                 "/logout",
@@ -34,16 +34,16 @@
     <h2 class="show-result">生成完了！</h2>
     <h3 class="show-map-title"><%= @sugoroku["title"] %></h3>
     <div id="board">
-      <!-- 線用レイヤー -->
-      <svg id="lines"></svg>
+        <!-- 線用レイヤー -->
+        <svg id="lines"></svg>
 
-      <!-- マス用レイヤー -->
-      <div id="map"></div>
+        <!-- マス用レイヤー -->
+        <div id="map"></div>
     </div>
 
     <script>
-      // RailsのデータをJSに渡す（重要）
-      const sugoroku = <%= @sugoroku.to_json.html_safe %>;
+        // RailsのデータをJSに渡す（重要）
+        const sugoroku = <%= @sugoroku.to_json.html_safe %>;
     </script>
 
     <!-- 外部JS読み込み -->

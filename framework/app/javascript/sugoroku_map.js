@@ -2,7 +2,9 @@
 
 function renderMap() {  
   const cols = 7;
-  const size = 130;
+  const x_distance = 150; // ！！親(board)のウィンドウサイズを求めてcolで割ればいいのでは！！
+  const y_distance = 150;
+  const square_size = 80
   const map = document.getElementById("map");
   const svg = document.getElementById("lines");
   const squares = sugoroku.squares;
@@ -25,11 +27,11 @@ function renderMap() {
       ? colInRow
       : (cols - 1 - colInRow);
 
-    const x = col * size;
-    const y = row * size;
+    const x = col * x_distance;
+    const y = row * y_distance;
 
     // 線の始点と終点になる
-    positions.push({ x: x + 50, y: y + 40 }); // 中心点
+    positions.push({ x: x + square_size / 2, y: y + square_size / 2 }); // 中心点
 
     const container = document.createElement("div");
     container.className = "square-container";
@@ -42,15 +44,15 @@ function renderMap() {
 
     switch (square.type) {
     case "start":
-        squareClass = "square-start-goal";
+        squareClass = "square start-goal";
         square_text = "START";
         break;
     case "goal":
-        squareClass = "square-start-goal";
+        squareClass = "square start-goal";
         square_text = "GOAL";
         break;
     case "event":
-        squareClass = "square-event";
+        squareClass = "square event";
         switch (square.effect) {
           case "skip": square_text = "🚫"; break;
           case "roll_again": square_text = "🔄"; break;
@@ -59,7 +61,7 @@ function renderMap() {
         }
         break;
     default:
-        squareClass = "square-normal";
+        squareClass = "square normal";
         square_text = "";
     }
 
@@ -67,7 +69,7 @@ function renderMap() {
 
     container.innerHTML = `
     <div class="${squareClass}">
-        <h1 class="square-label">${square_text}</h1>
+        <p>${square_text}</p>
     </div>
 
     <div class="tooltip">
@@ -104,7 +106,7 @@ function drawLine(svg, x1, y1, x2, y2) {
   line.setAttribute("y2", y2);
 
   line.setAttribute("stroke", "#dac9a8");
-  line.setAttribute("stroke-width", "16");
+  line.setAttribute("stroke-width", "20");
 
   svg.appendChild(line);
 }
