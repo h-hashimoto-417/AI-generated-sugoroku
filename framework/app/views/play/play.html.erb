@@ -53,7 +53,10 @@
 
                 <!-- コマ用レイヤ -->
                 <% @player_count.times do |i| %>
-                <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+                    <div id="player<%= i + 1 %>-piece-box" class="piece-box">
+                        <div class="piece-label"><%=@player_names[i]%></div>
+                        <div id="player-<%= i + 1 %>-piece" class="piece"></div>
+                    </div>
                 <% end %>
             </div>
         </div>

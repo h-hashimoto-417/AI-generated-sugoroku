@@ -277,18 +277,33 @@
 }
 
 /* コマのスタイル */
-.piece {
+.piece-box {
   position: absolute;
+  width: 40px;  /* コマと同じサイズにしておく */
+  height: 40px;
+  z-index: 50;
+  
+  transition: left 0.3s ease-out, top 0.3s ease-out; /* コマ自体の移動も滑らかに */
+}
+.piece {
   width: 40px;
   height: 40px;
   /* background-color: #8B1E3F; */
   /* border: 2px solid #1f203d; */
   border-radius: 50%;
-  /* top: 0px;
-  left: 60px; */
   z-index: 50;
-  transition: left 0.3s, top 0.3s; /* コマ自体の移動も滑らかに */
-  transition: left 0.3s ease-out, top 0.3s ease-out;
+}
+.piece-label {
+  position: absolute;
+  bottom: 100%;       /* コマの頭の上（100% ＋ 少しの余白）に配置 */
+  left: 50%;
+  transform: translateX(-50%); /* 常にコマの真ん中に来るように補正 */
+  
+  color: #000000;
+  font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap; /* 改行されないようにする */
 }
 /* ウィンドウに表示するコマ */
 .piece-in-window {
@@ -395,8 +410,9 @@
   top: 40%;
   left: 36%;
   align-self: center;
-  background-color: rgba(255, 245, 218, 0.972);
+  background-color: rgba(45, 63, 91, 0.972);
   font-family: 'Kaisei Opti', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
   text-align: center;
   z-index: 402;
   display: none;

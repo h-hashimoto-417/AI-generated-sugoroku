@@ -29,19 +29,20 @@ function setInitialPositions() {
     for (let i = 1; i <= window.player_count; i++) {
       //console.log("for文の中身");
         const piece = document.getElementById(`player-${i}-piece`);
+        const pieceBox = document.getElementById(`player${i}-piece-box`)
         
-        if (piece) {
-            piece.style.left = startX + 'px';
-            piece.style.top = startY + 'px';
-            piece.style.backgroundColor = window.player_colors[i-1];
+        if (pieceBox) {
+            pieceBox.style.left = startX + 'px';
+            pieceBox.style.top = startY + 'px';
+            piece.style.backgroundColor = window.player_colors[i-1]; // プレイヤーの選択した色を塗る
             //console.log("player" + i + "のコマ");
             
             // 全員が完全に重なると見づらいので、少しだけ位置をズラす（微調整）
-            if (i === 2) piece.style.left = (startX + dice_size + 15) + 'px';
-            if (i === 3) piece.style.top = (startY + dice_size + 15) + 'px';
+            if (i === 2) pieceBox.style.left = (startX + dice_size + 15) + 'px';
+            if (i === 3) pieceBox.style.top = (startY + dice_size + 15) + 'px';
             if (i === 4) {
-                piece.style.left = (startX + dice_size + 15) + 'px';
-                piece.style.top = (startY + dice_size + 15) + 'px';
+                pieceBox.style.left = (startX + dice_size + 15) + 'px';
+                pieceBox.style.top = (startY + dice_size + 15) + 'px';
             }
         }
     }
@@ -204,7 +205,7 @@ window.addEventListener('load', () => {
                     if (same_position.length != 1) {
                         same_position.forEach((value, index) => {
                             console.log(value, index);
-                            player_piece = document.getElementById(`player-${value}-piece`);
+                            player_piece = document.getElementById(`player${value}-piece-box`);
                             if (player_piece) {
                                 player_piece.style.left = index%2 === 0 ? new_x + 60 + 'px' : new_x + dice_size + 75 + 'px';
                                 player_piece.style.top = index < 2 ? new_y + 'px' : new_y + dice_size + 15 + 'px';
@@ -215,7 +216,7 @@ window.addEventListener('load', () => {
                         });
                     }
                     else {
-                        const piece = document.getElementById(`player-${current_player}-piece`);
+                        const piece = document.getElementById(`player${current_player}-piece-box`);
                         if (piece) {
                             piece.style.left = new_x + 82 + "px";
                             piece.style.top = new_y + 25 + "px";
